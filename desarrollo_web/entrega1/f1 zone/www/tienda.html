@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="F1 Zone - Tienda oficial de merchandising de Fórmula 1">
+    <title>Tienda - F1 Zone</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con navegación -->
+    <header>
+        <nav>
+            <div class="logo">
+               <a href="index.html"><img src="assets/images/logo.png" alt="F1 Zone Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+                <li><a href="pilotos.html">Pilotos</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="tienda.html" class="active">Tienda</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+                <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <div class="menu-mobile">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section para Tienda -->
+    <section class="hero hero-tienda">
+        <h1>Tienda Oficial F1</h1>
+        <p>Merchandising exclusivo de tus equipos y pilotos favoritos</p>
+    </section>
+
+    <!-- Filtros de Productos -->
+    <section class="filtros-tienda">
+        <div class="filtros-container">
+            <select name="equipo" id="equipo-filter">
+                <option value="">Todos los Equipos</option>
+                <option value="redbull">Red Bull Racing</option>
+                <option value="ferrari">Ferrari</option>
+                <option value="mercedes">Mercedes</option>
+                <!-- Más opciones... -->
+            </select>
+            <select name="categoria" id="categoria-filter">
+                <option value="">Todas las Categorías</option>
+                <option value="ropa">Ropa</option>
+                <option value="gorras">Gorras</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="modelos">Modelos a Escala</option>
+            </select>
+            <button class="btn-filtrar">Filtrar</button>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="productos-container">
+        <!-- Red Bull -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/rb-gorra.jpg" alt="Gorra Red Bull Racing">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Gorra Red Bull Racing 2024</h3>
+                <p class="producto-precio">$35.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(45)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Ferrari -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/ferrari-polo.jpg" alt="Polo Ferrari">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Polo Scuderia Ferrari 2024</h3>
+                <p class="producto-precio">$89.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(67)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Mercedes -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/mercedes-modelo.jpg" alt="Modelo Mercedes W15">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Modelo Mercedes W15 1:18</h3>
+                <p class="producto-precio">$159.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(23)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- McLaren -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/mclaren-camiseta.jpg" alt="Camiseta McLaren">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Camiseta McLaren 2024</h3>
+                <p class="producto-precio">$49.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                    <span>(30)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Aston Martin -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/astonmartin-gorra.jpg" alt="Gorra Aston Martin">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Gorra Aston Martin 2024</h3>
+                <p class="producto-precio">$39.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(18)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Alpine -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/alpine-jersey.jpg" alt="Jersey Alpine">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Jersey Alpine 2024</h3>
+                <p class="producto-precio">$59.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(25)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Williams -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/williams-chaqueta.jpg" alt="Chaqueta Williams Racing">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>Chaqueta Williams Racing 2024</h3>
+                <p class="producto-precio">$129.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(15)</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Modelo F1 Histórico -->
+        <article class="producto-card">
+            <div class="producto-imagen">
+                <img src="assets/images/tienda/modelo-mp4-4.jpg" alt="Modelo McLaren MP4/4">
+                <div class="producto-overlay">
+                    <button class="btn-agregar-carrito">Agregar al Carrito</button>
+                </div>
+            </div>
+            <div class="producto-info">
+                <h3>McLaren MP4/4 Senna 1:18</h3>
+                <p class="producto-precio">$199.99</p>
+                <div class="producto-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(42)</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Acerca de F1 Zone</h4>
+                <p>Tu destino definitivo para todo lo relacionado con la Fórmula 1. Noticias, estadísticas y productos oficiales de la máxima categoría del automovilismo.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="equipos.html">Equipos</a></li>
+                    <li><a href="pilotos.html">Pilotos</a></li>
+                    <li><a href="calendario.html">Calendario</a></li>
+                    <li><a href="noticias.html">Últimas Noticias</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Atención al Cliente</h4>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Envíos y Devoluciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Suscríbete para recibir las últimas noticias y ofertas exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 F1 Zone. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
