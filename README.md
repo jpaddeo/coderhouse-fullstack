@@ -27,11 +27,11 @@ Referencias:
 
 ### Entrega 1
 
-La entrega 1, además de ser entregada vía Google Drive, ahora se puede consultar desde dicho repositorio mediante el siguiente link [desarrollo-web/entrega1](desarrollo-web/entrega1)
+La entrega 1, además de ser entregada vía Google Drive, ahora se puede consultar desde dicho repositorio mediante el siguiente link [desarrollo_web/entrega1](desarrollo_web/entrega1)
 
 ### Entrega 2
 
-Se puede consultar desde el siguiente link [desarrollo-web/entrega2](desarrollo-web/entrega2)
+Se puede consultar desde el siguiente link [desarrollo_web/entrega2](desarrollo_web/entrega2)
 
 ### Entrega 3
 
