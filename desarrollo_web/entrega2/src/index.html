@@ -10,7 +10,7 @@
     <title>F1 Zone - Tu portal de Fórmula 1</title>
 
     <!--Estilos -->
-    <link rel="stylesheet" href="./src/assets/styles.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
 
     <!-- Fonts -->
     <link
@@ -43,11 +43,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-            <img
-              src="./src/assets/images/logo.png"
-              class="logo"
-              alt="F1 Logo"
-            />
+            <img src="./assets/images/logo.png" class="logo" alt="F1 Logo" />
           </a>
           <button
             class="navbar-toggler"
@@ -79,12 +75,15 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="./src/pages/calendario.html"
+                    <a class="dropdown-item" href="./pages/calendario.html"
                       >Calendario 2024</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="./src/pages/resultados.html"
+                    <a
+                      class="dropdown-item disabled"
+                      href="#"
+                      aria-disabled="true"
                       >Resultados</a
                     >
                   </li>
@@ -109,8 +108,16 @@
                   <i class="bi bi-people-fill me-1"></i>Equipos y Pilotos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Equipos</a></li>
-                  <li><a class="dropdown-item" href="#">Pilotos</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./pages/equipos.html"
+                      >Equipos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./pages/pilotos.html"
+                      >Pilotos</a
+                    >
+                  </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="#">Histórico</a>
@@ -118,26 +125,29 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./src/pages/noticias.html">
+                <a class="nav-link" href="./pages/noticias.html">
                   <i class="bi bi-newspaper me-1"></i>&nbsp;Noticias
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./src/pages/tienda.html">
+                <a class="nav-link" href="./pages/tienda.html">
                   <i class="bi bi-shop me-1"></i>&nbsp;Tienda
                 </a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Buscar..."
-                aria-label="Buscar"
-              />
-              <button class="btn btn-danger" type="submit">
-                <i class="bi bi-search"></i>
-              </button>
+              <div class="input-group mb-2">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Buscar..."
+                  aria-label="Buscar"
+                  aria-describedby="button-search"
+                />
+                <button class="btn btn-danger" type="submit" id="button-search">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
             </form>
           </div>
         </div>
@@ -150,10 +160,10 @@
         <h1>Bienvenido a F1 Zone</h1>
         <p>Tu fuente definitiva de información sobre Fórmula 1</p>
         <div class="hero-buttons">
-          <a href="./src/pages/calendario.html" class="btn primary"
+          <a href="./pages/calendario.html" class="btn primary"
             >Ver Calendario</a
           >
-          <a href="./src/pages/noticias.html" class="btn secondary"
+          <a href="./pages/noticias.html" class="btn secondary"
             >Últimas Noticias</a
           >
         </div>
@@ -166,7 +176,7 @@
       <div class="destacados-grid">
         <article class="destacado-card">
           <img
-            src="./src/assets/images/destacados/destacado1.jpg"
+            src="./assets/images/destacados/destacado1.jpg"
             alt="Destacado 1"
           />
           <div class="destacado-info">
@@ -180,7 +190,7 @@
 
         <article class="destacado-card">
           <img
-            src="./src/assets/images/destacados/destacado2.jpg"
+            src="./assets/images/destacados/destacado2.jpg"
             alt="Destacado 2"
           />
           <div class="destacado-info">
@@ -192,7 +202,7 @@
 
         <article class="destacado-card">
           <img
-            src="./src/assets/images/destacados/destacado3.jpg"
+            src="./assets/images/destacados/destacado3.jpg"
             alt="Destacado 3"
           />
           <div class="destacado-info">
@@ -209,10 +219,7 @@
       <h2>Noticias Recientes</h2>
       <div class="noticias-grid">
         <article class="noticia-card">
-          <img
-            src="./src/assets/images/noticias/noticia1.jpg"
-            alt="Noticia 1"
-          />
+          <img src="./assets/images/noticias/noticia1.jpg" alt="Noticia 1" />
           <div class="noticia-info">
             <h3>Red Bull domina en Baréin</h3>
             <p>
@@ -224,10 +231,7 @@
         </article>
 
         <article class="noticia-card">
-          <img
-            src="./src/assets/images/noticias/noticia2.jpg"
-            alt="Noticia 2"
-          />
+          <img src="./assets/images/noticias/noticia2.jpg" alt="Noticia 2" />
           <div class="noticia-info">
             <h3>Hamilton busca su octavo título</h3>
             <p>
@@ -239,10 +243,7 @@
         </article>
 
         <article class="noticia-card">
-          <img
-            src="./src/assets/images/noticias/noticia3.jpg"
-            alt="Noticia 3"
-          />
+          <img src="./assets/images/noticias/noticia3.jpg" alt="Noticia 3" />
           <div class="noticia-info">
             <h3>Ferrari presenta mejoras en su monoplaza</h3>
             <p>
@@ -256,19 +257,15 @@
     </section>
 
     <!-- Footer mejorado con Bootstrap -->
-    <footer class="bg-dark text-light py-5">
-      <div class="container">
+    <div class="container-fluid mt-2">
+      <footer class="py-4 px-5">
+        <hr class="my-2" />
         <!-- Fila principal -->
         <div class="row g-4">
           <!-- Columna de información principal -->
           <div class="col-lg-4 col-md-6">
             <div>
-              <img
-                src="./src/assets/images/logo.png"
-                alt="F1 Logo"
-                height="40"
-                class="mb-3"
-              />
+              <img src="./assets/images/logo.png" class="logo" alt="F1 Logo" />
               <h5>F1 Zone</h5>
               <p class="text-muted">
                 Tu portal definitivo de Fórmula 1. Noticias, resultados,
@@ -293,27 +290,43 @@
             <h5 class="mb-3">Enlaces Rápidos</h5>
             <ul class="list-unstyled">
               <li class="mb-2">
-                <a href="#" class="text-muted text-decoration-none hover-light">
+                <a
+                  href="./index.html"
+                  class="text-muted text-decoration-none hover-light"
+                >
                   <i class="bi bi-chevron-right me-1"></i>Inicio
                 </a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-muted text-decoration-none hover-light">
+                <a
+                  href="./pages/calendario.html"
+                  class="text-muted text-decoration-none hover-light"
+                >
                   <i class="bi bi-chevron-right me-1"></i>Calendario
                 </a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-muted text-decoration-none hover-light">
+                <a
+                  href="#"
+                  class="text-muted text-decoration-none hover-light disabled"
+                  aria-disabled="true"
+                >
                   <i class="bi bi-chevron-right me-1"></i>Resultados
                 </a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-muted text-decoration-none hover-light">
+                <a
+                  href="./pages/pilotos.html"
+                  class="text-muted text-decoration-none hover-light"
+                >
                   <i class="bi bi-chevron-right me-1"></i>Pilotos
                 </a>
               </li>
               <li class="mb-2">
-                <a href="#" class="text-muted text-decoration-none hover-light">
+                <a
+                  href="./pages/equipos.html"
+                  class="text-muted text-decoration-none hover-light"
+                >
                   <i class="bi bi-chevron-right me-1"></i>Equipos
                 </a>
               </li>
@@ -340,13 +353,13 @@
             <h5 class="mb-3">Contacto</h5>
             <ul class="list-unstyled text-muted">
               <li class="mb-2">
-                <i class="bi bi-geo-alt me-2"></i>Madrid, España
+                <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
               </li>
               <li class="mb-2">
                 <i class="bi bi-envelope me-2"></i>info@f1zone.com
               </li>
               <li class="mb-2">
-                <i class="bi bi-telephone me-2"></i>+34 900 123 456
+                <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
               </li>
             </ul>
           </div>
@@ -364,9 +377,13 @@
                   class="form-control"
                   placeholder="Tu email"
                   aria-label="Email"
-                  aria-describedby="button-addon2"
+                  aria-describedby="button-send-newsletter"
                 />
-                <button class="btn btn-danger" type="button" id="button-addon2">
+                <button
+                  class="btn btn-danger"
+                  type="button"
+                  id="button-send-newsletter"
+                >
                   <i class="bi bi-send-fill"></i>
                 </button>
               </div>
@@ -387,7 +404,7 @@
           </div>
         </div>
 
-        <hr class="my-4" />
+        <hr class="my-2" />
 
         <!-- Fila de copyright -->
         <div class="row align-items-center">
@@ -406,8 +423,8 @@
             <a href="#" class="text-muted text-decoration-none">Cookies</a>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <!-- Bootstrap JS y Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
