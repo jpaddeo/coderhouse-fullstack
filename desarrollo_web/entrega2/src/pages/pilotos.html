@@ -8,9 +8,6 @@
       content="F1 Zone - Pilotos de Fórmula 1. Conoce a todos los pilotos de la temporada 2024."
     />
     <title>Pilotos 2024 - F1 Zone</title>
-    <!-- Enlaces a CSS -->
-    <link rel="stylesheet" href="../assets/styles.css" />
-
     <!-- Enlaces externos -->
     <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap"
@@ -26,6 +23,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!--Estilos -->
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <!-- Fin Estilos -->
   </head>
   <body>
     <!-- Header con Bootstrap y enlaces actualizados -->
@@ -152,679 +152,1083 @@
     </section>
 
     <!-- Sección Principal de Pilotos -->
-    <section class="pilotos-container">
-      <!-- Red Bull Racing -->
-      <div class="piloto-card">
-        <img
-          src="../assets/images/pilotos/verstappen.jpg"
-          alt="Max Verstappen"
-        />
-        <div class="piloto-info">
-          <h2>Max Verstappen</h2>
-          <p class="equipo">Red Bull Racing</p>
-          <p class="numero">#1</p>
-          <p class="nacionalidad">Países Bajos</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('verstappen')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+    <section class="pilotos-section">
+      <div class="container">
+        <h2 class="section-title">Pilotos de Fórmula 1</h2>
+        <p class="section-subtitle">Conoce a los 20 pilotos que compiten en la temporada 2024</p>
+        
+        <div class="pilotos-grid">
+          <!-- Max Verstappen -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/verstappen.jpg" alt="Max Verstappen" />
+              <div class="piloto-numero">#1</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/redbull-logo.png" alt="Red Bull Racing" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Max Verstappen</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Países Bajos</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>30/09/1997</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 3</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 54</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 98</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 32</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Oracle Red Bull Racing</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-verstappen" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('verstappen')">&times;</span>
-          <h2>Max Verstappen</h2>
-          <p><strong>Equipo:</strong> Red Bull Racing</p>
-          <p><strong>Podios:</strong> 98</p>
-          <p><strong>Carreras Completadas:</strong> 185</p>
-          <p><strong>Victorias:</strong> 54</p>
-        </div>
-      </div>
+          <!-- Sergio Pérez -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/perez.jpg" alt="Sergio Pérez" />
+              <div class="piloto-numero">#11</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/redbull-logo.png" alt="Red Bull Racing" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Sergio Pérez</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>México</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>26/01/1990</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 6</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 35</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 3</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Oracle Red Bull Racing</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/perez.jpg" alt="Sergio Pérez" />
-        <div class="piloto-info">
-          <h2>Sergio Pérez</h2>
-          <p class="equipo">Red Bull Racing</p>
-          <p class="numero">#11</p>
-          <p class="nacionalidad">México</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('perez')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Lewis Hamilton -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/hamilton.jpg" alt="Lewis Hamilton" />
+              <div class="piloto-numero">#44</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/mercedes-logo.png" alt="Mercedes AMG F1" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Lewis Hamilton</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Reino Unido</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>07/01/1985</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 7</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 103</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 197</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 104</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Mercedes-AMG PETRONAS F1</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-perez" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('perez')">&times;</span>
-          <h2>Sergio Pérez</h2>
-          <p><strong>Equipo:</strong> Red Bull Racing</p>
-          <p><strong>Podios:</strong> 35</p>
-          <p><strong>Carreras Completadas:</strong> 257</p>
-          <p><strong>Victorias:</strong> 6</p>
-        </div>
-      </div>
+          <!-- George Russell -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/russell.jpg" alt="George Russell" />
+              <div class="piloto-numero">#63</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/mercedes-logo.png" alt="Mercedes AMG F1" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>George Russell</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Reino Unido</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>15/02/1998</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 1</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 11</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 1</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Mercedes-AMG PETRONAS F1</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <!-- Mercedes-AMG Petronas -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/hamilton.jpg" alt="Lewis Hamilton" />
-        <div class="piloto-info">
-          <h2>Lewis Hamilton</h2>
-          <p class="equipo">Mercedes-AMG Petronas</p>
-          <p class="numero">#44</p>
-          <p class="nacionalidad">Reino Unido</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('hamilton')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Charles Leclerc -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/leclerc.jpg" alt="Charles Leclerc" />
+              <div class="piloto-numero">#16</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/ferrari-logo.png" alt="Scuderia Ferrari" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Charles Leclerc</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Mónaco</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>16/10/1997</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 5</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 30</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 23</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Scuderia Ferrari</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-hamilton" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('hamilton')">&times;</span>
-          <h2>Lewis Hamilton</h2>
-          <p><strong>Equipo:</strong> Mercedes-AMG Petronas</p>
-          <p><strong>Podios:</strong> 197</p>
-          <p><strong>Carreras Completadas:</strong> 332</p>
-          <p><strong>Victorias:</strong> 103</p>
-        </div>
-      </div>
+          <!-- Carlos Sainz -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/sainz.jpg" alt="Carlos Sainz" />
+              <div class="piloto-numero">#55</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/ferrari-logo.png" alt="Scuderia Ferrari" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Carlos Sainz</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>España</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>01/09/1994</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 2</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 18</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 5</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Scuderia Ferrari</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/russell.jpg" alt="George Russell" />
-        <div class="piloto-info">
-          <h2>George Russell</h2>
-          <p class="equipo">Mercedes-AMG Petronas</p>
-          <p class="numero">#63</p>
-          <p class="nacionalidad">Reino Unido</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('russell')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Lando Norris -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/norris.jpg" alt="Lando Norris" />
+              <div class="piloto-numero">#4</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/mclaren-logo.png" alt="McLaren F1 Team" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Lando Norris</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Reino Unido</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>13/11/1999</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 13</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 1</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>McLaren Formula 1 Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-russell" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('russell')">&times;</span>
-          <h2>George Russell</h2>
-          <p><strong>Equipo:</strong> Mercedes-AMG Petronas</p>
-          <p><strong>Podios:</strong> 11</p>
-          <p><strong>Carreras Completadas:</strong> 105</p>
-          <p><strong>Victorias:</strong> 1</p>
-        </div>
-      </div>
+          <!-- Oscar Piastri -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/piastri.jpg" alt="Oscar Piastri" />
+              <div class="piloto-numero">#81</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/mclaren-logo.png" alt="McLaren F1 Team" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Oscar Piastri</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Australia</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>06/04/2001</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 2</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>McLaren Formula 1 Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <!-- Ferrari -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/leclerc.jpg" alt="Charles Leclerc" />
-        <div class="piloto-info">
-          <h2>Charles Leclerc</h2>
-          <p class="equipo">Scuderia Ferrari</p>
-          <p class="numero">#16</p>
-          <p class="nacionalidad">Mónaco</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('leclerc')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Fernando Alonso -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/alonso.jpg" alt="Fernando Alonso" />
+              <div class="piloto-numero">#14</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/astonmartin-logo.png" alt="Aston Martin F1" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Fernando Alonso</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>España</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>29/07/1981</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 2</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 32</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 106</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 22</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Aston Martin Aramco F1</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-leclerc" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('leclerc')">&times;</span>
-          <h2>Charles Leclerc</h2>
-          <p><strong>Equipo:</strong> Scuderia Ferrari</p>
-          <p><strong>Podios:</strong> 28</p>
-          <p><strong>Carreras Completadas:</strong> 123</p>
-          <p><strong>Victorias:</strong> 5</p>
-        </div>
-      </div>
+          <!-- Lance Stroll -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/stroll.jpg" alt="Lance Stroll" />
+              <div class="piloto-numero">#18</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/astonmartin-logo.png" alt="Aston Martin F1" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Lance Stroll</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Canadá</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>29/10/1998</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 3</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 1</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Aston Martin Aramco F1</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <!-- Esteban Ocon -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/ocon.jpg" alt="Esteban Ocon" />
+              <div class="piloto-numero">#31</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/alpine-logo.png" alt="Alpine F1" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Esteban Ocon</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Francia</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>17/09/1996</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 1</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 3</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Alpine F1 Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/sainz.jpg" alt="Carlos Sainz" />
-        <div class="piloto-info">
-          <h2>Carlos Sainz</h2>
-          <p class="equipo">Scuderia Ferrari</p>
-          <p class="numero">#55</p>
-          <p class="nacionalidad">España</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('sainz')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Pierre Gasly -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/gasly.jpg" alt="Pierre Gasly" />
+              <div class="piloto-numero">#10</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/alpine-logo.png" alt="Alpine F1" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Pierre Gasly</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Francia</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>07/02/1996</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 1</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 4</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Alpine F1 Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-sainz" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('sainz')">&times;</span>
-          <h2>Carlos Sainz</h2>
-          <p><strong>Equipo:</strong> Scuderia Ferrari</p>
-          <p><strong>Podios:</strong> 18</p>
-          <p><strong>Carreras Completadas:</strong> 185</p>
-          <p><strong>Victorias:</strong> 2</p>
-        </div>
-      </div>
+          <!-- Liam Lawson -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/ricciardo.jpg" alt="Liam Lawson" />
+              <div class="piloto-numero">#30</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/rb-logo.png" alt="RB F1 Team" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Liam Lawson</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Nueva Zelanda</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>11/02/2002</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>RB Formula One Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <!-- McLaren -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/norris.jpg" alt="Lando Norris" />
-        <div class="piloto-info">
-          <h2>Lando Norris</h2>
-          <p class="equipo">McLaren F1 Team</p>
-          <p class="numero">#4</p>
-          <p class="nacionalidad">Reino Unido</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('norris')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Zhou Guanyu -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/zhou.jpg" alt="Zhou Guanyu" />
+              <div class="piloto-numero">#24</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/stake-logo.png" alt="Stake F1 Team" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Zhou Guanyu</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>China</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>30/05/1999</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Stake F1 Team Kick Sauber</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-norris" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('norris')">&times;</span>
-          <h2>Lando Norris</h2>
-          <p><strong>Equipo:</strong> McLaren F1 Team</p>
-          <p><strong>Podios:</strong> 13</p>
-          <p><strong>Carreras Completadas:</strong> 105</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
+          <!-- Alex Albon -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/albon.jpg" alt="Alex Albon" />
+              <div class="piloto-numero">#23</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/williams-logo.png" alt="Williams Racing" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Alexander Albon</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Tailandia</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>23/03/1996</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 2</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Williams Racing</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/piastri.jpg" alt="Oscar Piastri" />
-        <div class="piloto-info">
-          <h2>Oscar Piastri</h2>
-          <p class="equipo">McLaren F1 Team</p>
-          <p class="numero">#81</p>
-          <p class="nacionalidad">Australia</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('piastri')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Franco Colapinto -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/colapinto.jpg" alt="Franco Colapinto" />
+              <div class="piloto-numero">#43</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/williams-logo.png" alt="Williams Racing" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Franco Colapinto</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Argentina</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>27/05/2003</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 0</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>Williams Racing</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-piastri" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('piastri')">&times;</span>
-          <h2>Oscar Piastri</h2>
-          <p><strong>Equipo:</strong> McLaren F1 Team</p>
-          <p><strong>Podios:</strong> 2</p>
-          <p><strong>Carreras Completadas:</strong> 22</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
+          <!-- Kevin Magnussen -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/magnussen.jpg" alt="Kevin Magnussen" />
+              <div class="piloto-numero">#20</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/haas-logo.png" alt="Haas F1 Team" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Kevin Magnussen</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Dinamarca</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>05/10/1992</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 1</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 1</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>MoneyGram Haas F1 Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <!-- Aston Martin -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/alonso.jpg" alt="Fernando Alonso" />
-        <div class="piloto-info">
-          <h2>Fernando Alonso</h2>
-          <p class="equipo">Aston Martin F1 Team</p>
-          <p class="numero">#14</p>
-          <p class="nacionalidad">España</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('alonso')"
-            >Más Información</a
-          >
-        </div>
-      </div>
+          <!-- Nico Hulkenberg -->
+          <div class="piloto-card">
+            <div class="piloto-header">
+              <img src="../assets/images/pilotos/hulkenberg.jpg" alt="Nico Hulkenberg" />
+              <div class="piloto-numero">#27</div>
+              <div class="equipo-logo">
+                <img src="../assets/images/logos/haas-logo.png" alt="Haas F1 Team" />
+              </div>
+            </div>
+            <div class="piloto-content">
+              <div class="piloto-info">
+                <h3>Nico Hulkenberg</h3>
+                <div class="piloto-stats">
+                  <div class="stat">
+                    <i class="bi bi-flag-fill"></i>
+                    <span>Alemania</span>
+                  </div>
+                  <div class="stat">
+                    <i class="bi bi-calendar-event"></i>
+                    <span>19/08/1987</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="piloto-detalles">
+                <div class="detalle">
+                  <i class="bi bi-trophy-fill"></i>
+                  <span>Campeonatos: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-flag-fill"></i>
+                  <span>Victorias: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-award-fill"></i>
+                  <span>Podios: 0</span>
+                </div>
+                <div class="detalle">
+                  <i class="bi bi-speedometer2"></i>
+                  <span>Poles: 1</span>
+                </div>
+              </div>
+              
+              <div class="equipo-actual">
+                <span>Equipo Actual</span>
+                <h4>MoneyGram Haas F1 Team</h4>
+              </div>
+              
+              <a href="#" class="btn-mas-info">Más Información <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
 
-      <div id="modal-alonso" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('alonso')">&times;</span>
-          <h2>Fernando Alonso</h2>
-          <p><strong>Equipo:</strong> Aston Martin F1 Team</p>
-          <p><strong>Podios:</strong> 106</p>
-          <p><strong>Carreras Completadas:</strong> 377</p>
-          <p><strong>Victorias:</strong> 32</p>
-        </div>
-      </div>
-
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/stroll.jpg" alt="Lance Stroll" />
-        <div class="piloto-info">
-          <h2>Lance Stroll</h2>
-          <p class="equipo">Aston Martin F1 Team</p>
-          <p class="numero">#18</p>
-          <p class="nacionalidad">Canadá</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('stroll')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-stroll" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('stroll')">&times;</span>
-          <h2>Lance Stroll</h2>
-          <p><strong>Equipo:</strong> Aston Martin F1 Team</p>
-          <p><strong>Podios:</strong> 3</p>
-          <p><strong>Carreras Completadas:</strong> 143</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <!-- Alpine -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/gasly.jpg" alt="Pierre Gasly" />
-        <div class="piloto-info">
-          <h2>Pierre Gasly</h2>
-          <p class="equipo">Alpine F1 Team</p>
-          <p class="numero">#10</p>
-          <p class="nacionalidad">Francia</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('gasly')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-gasly" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('gasly')">&times;</span>
-          <h2>Pierre Gasly</h2>
-          <p><strong>Equipo:</strong> Alpine F1 Team</p>
-          <p><strong>Podios:</strong> 4</p>
-          <p><strong>Carreras Completadas:</strong> 127</p>
-          <p><strong>Victorias:</strong> 1</p>
-        </div>
-      </div>
-
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/ocon.jpg" alt="Esteban Ocon" />
-        <div class="piloto-info">
-          <h2>Esteban Ocon</h2>
-          <p class="equipo">Alpine F1 Team</p>
-          <p class="numero">#31</p>
-          <p class="nacionalidad">Francia</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('ocon')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-ocon" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('ocon')">&times;</span>
-          <h2>Esteban Ocon</h2>
-          <p><strong>Equipo:</strong> Alpine F1 Team</p>
-          <p><strong>Podios:</strong> 3</p>
-          <p><strong>Carreras Completadas:</strong> 133</p>
-          <p><strong>Victorias:</strong> 1</p>
-        </div>
-      </div>
-
-      <!-- Williams -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/albon.jpg" alt="Alexander Albon" />
-        <div class="piloto-info">
-          <h2>Alexander Albon</h2>
-          <p class="equipo">Williams Racing</p>
-          <p class="numero">#23</p>
-          <p class="nacionalidad">Tailandia</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('albon')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-albon" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('albon')">&times;</span>
-          <h2>Alexander Albon</h2>
-          <p><strong>Equipo:</strong> Williams Racing</p>
-          <p><strong>Podios:</strong> 2</p>
-          <p><strong>Carreras Completadas:</strong> 82</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <div class="piloto-card">
-        <img
-          src="../assets/images/pilotos/colapinto.jpg"
-          alt="Franco Colapinto"
-        />
-        <div class="piloto-info">
-          <h2>Franco Colapinto</h2>
-          <p class="equipo">Williams Racing</p>
-          <p class="numero">#43</p>
-          <p class="nacionalidad">Argentino</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('sargeant')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-sargeant" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('sargeant')">&times;</span>
-          <h2>Franco Colapinto</h2>
-          <p><strong>Equipo:</strong> Williams Racing</p>
-          <p><strong>Podios:</strong> 0</p>
-          <p><strong>Carreras Completadas:</strong> 7</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <!-- RB (antes AlphaTauri) -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/tsunoda.jpg" alt="Yuki Tsunoda" />
-        <div class="piloto-info">
-          <h2>Yuki Tsunoda</h2>
-          <p class="equipo">RB F1 Team</p>
-          <p class="numero">#22</p>
-          <p class="nacionalidad">Japón</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('tsunoda')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-tsunoda" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('tsunoda')">&times;</span>
-          <h2>Yuki Tsunoda</h2>
-          <p><strong>Equipo:</strong> RB F1 Team</p>
-          <p><strong>Podios:</strong> 0</p>
-          <p><strong>Carreras Completadas:</strong> 66</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/ricciardo.jpg" alt="Liam Lawson" />
-        <div class="piloto-info">
-          <h2>Liam Lawson</h2>
-          <p class="equipo">RB F1 Team</p>
-          <p class="numero">#30</p>
-          <p class="nacionalidad">Neozelandés</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('lawson')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-ricciardo" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('ricciardo')">&times;</span>
-          <h2>Liam Lawson</h2>
-          <p><strong>Equipo:</strong> RB F1 Team</p>
-          <p><strong>Podios:</strong> 0</p>
-          <p><strong>Carreras Completadas:</strong> 10</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <!-- Sauber (antes Alfa Romeo) -->
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/bottas.jpg" alt="Valtteri Bottas" />
-        <div class="piloto-info">
-          <h2>Valtteri Bottas</h2>
-          <p class="equipo">Stake F1 Team Sauber</p>
-          <p class="numero">#77</p>
-          <p class="nacionalidad">Finlandia</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('bottas')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-bottas" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('bottas')">&times;</span>
-          <h2>Valtteri Bottas</h2>
-          <p><strong>Equipo:</strong> Stake F1 Team Sauber</p>
-          <p><strong>Podios:</strong> 67</p>
-          <p><strong>Carreras Completadas:</strong> 223</p>
-          <p><strong>Victorias:</strong> 10</p>
-        </div>
-      </div>
-
-      <div class="piloto-card">
-        <img src="../assets/images/pilotos/zhou.jpg" alt="Zhou Guanyu" />
-        <div class="piloto-info">
-          <h2>Zhou Guanyu</h2>
-          <p class="equipo">Stake F1 Team Sauber</p>
-          <p class="numero">#24</p>
-          <p class="nacionalidad">China</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('zhou')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-zhou" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('zhou')">&times;</span>
-          <h2>Zhou Guanyu</h2>
-          <p><strong>Equipo:</strong> Stake F1 Team Sauber</p>
-          <p><strong>Podios:</strong> 0</p>
-          <p><strong>Carreras Completadas:</strong> 44</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <!-- Haas F1 -->
-      <div class="piloto-card">
-        <img
-          src="../assets/images/pilotos/hulkenberg.jpg"
-          alt="Nico Hülkenberg"
-        />
-        <div class="piloto-info">
-          <h2>Nico Hülkenberg</h2>
-          <p class="equipo">Haas F1 Team</p>
-          <p class="numero">#27</p>
-          <p class="nacionalidad">Alemania</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('hulkenberg')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-hulkenberg" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('hulkenberg')">&times;</span>
-          <h2>Nico Hülkenberg</h2>
-          <p><strong>Equipo:</strong> Haas F1 Team</p>
-          <p><strong>Podios:</strong> 0</p>
-          <p><strong>Carreras Completadas:</strong> 203</p>
-          <p><strong>Victorias:</strong> 0</p>
-        </div>
-      </div>
-
-      <div class="piloto-card">
-        <img
-          src="../assets/images/pilotos/magnussen.jpg"
-          alt="Kevin Magnussen"
-        />
-        <div class="piloto-info">
-          <h2>Kevin Magnussen</h2>
-          <p class="equipo">Haas F1 Team</p>
-          <p class="numero">#20</p>
-          <p class="nacionalidad">Dinamarca</p>
-          <a href="#" class="btn-mas-info" onclick="openModal('magnussen')"
-            >Más Información</a
-          >
-        </div>
-      </div>
-
-      <div id="modal-magnussen" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('magnussen')">&times;</span>
-          <h2>Kevin Magnussen</h2>
-          <p><strong>Equipo:</strong> Haas F1 Team</p>
-          <p><strong>Podios:</strong> 1</p>
-          <p><strong>Carreras Completadas:</strong> 171</p>
-          <p><strong>Victorias:</strong> 0</p>
         </div>
       </div>
     </section>
 
     <!-- Footer mejorado con Bootstrap -->
-    <div class="container-fluid mt-2">
-      <footer class="py-4 px-5">
-        <hr class="my-2" />
-        <!-- Fila principal -->
-        <div class="row g-4">
-          <!-- Columna de información principal -->
-          <div class="col-lg-4 col-md-6">
-            <div>
-              <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
-              <h5>F1 Zone</h5>
-              <p class="text-muted">
-                Tu portal definitivo de Fórmula 1. Noticias, resultados,
-                estadísticas y toda la información del mundo del automovilismo.
-              </p>
-            </div>
-            <div class="mb-4">
-              <h6 class="mb-3">Descarga nuestra App</h6>
-              <div class="d-flex gap-2">
-                <a href="#" class="btn btn-outline-light btn-sm">
-                  <i class="bi bi-apple me-2"></i>App Store
-                </a>
-                <a href="#" class="btn btn-outline-light btn-sm">
-                  <i class="bi bi-google-play me-2"></i>Play Store
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna de enlaces rápidos -->
-          <div class="col-lg-2 col-md-6">
-            <h5 class="mb-3">Enlaces Rápidos</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a
-                  href="../index.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Inicio
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="calendario.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Calendario
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="#"
-                  class="text-muted text-decoration-none hover-light disabled"
-                  aria-disabled="true"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Resultados
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="pilotos.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Pilotos
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="equipos.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Equipos
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna de redes sociales -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="mb-3">Síguenos</h5>
-            <div class="d-flex gap-3 mb-4">
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-twitter-x"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-instagram"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-youtube"></i>
-              </a>
-            </div>
-            <h5 class="mb-3">Contacto</h5>
-            <ul class="list-unstyled text-muted">
-              <li class="mb-2">
-                <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-envelope me-2"></i>info@f1zone.com
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna de newsletter -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="mb-3">Newsletter</h5>
-            <p class="text-muted mb-4">
-              Suscríbete para recibir las últimas noticias y actualizaciones.
+    <footer class="bg-dark text-light py-4 px-5">
+      <hr class="my-2 border-secondary" />
+      <!-- Fila principal -->
+      <div class="row g-4">
+        <!-- Columna de información principal -->
+        <div class="col-lg-4 col-md-6">
+          <div>
+            <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
+            <h5 class="text-light">F1 Zone</h5>
+            <p class="text-secondary">
+              Tu portal definitivo de Fórmula 1. Noticias, resultados,
+              estadísticas y toda la información del mundo del automovilismo.
             </p>
-            <form class="mb-4">
-              <div class="input-group mb-2">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  aria-label="Email"
-                  aria-describedby="button-send-newsletter"
-                />
-                <button
-                  class="btn btn-danger"
-                  type="button"
-                  id="button-send-newsletter"
-                >
-                  <i class="bi bi-send-fill"></i>
-                </button>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="newsletterCheck"
-                />
-                <label
-                  class="form-check-label text-muted small"
-                  for="newsletterCheck"
-                >
-                  Acepto recibir comunicaciones comerciales
-                </label>
-              </div>
-            </form>
+          </div>
+          <div class="mb-4">
+            <h6 class="mb-3 text-light">Descarga nuestra App</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-apple me-2"></i>App Store
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-google-play me-2"></i>Play Store
+              </a>
+            </div>
           </div>
         </div>
 
-        <hr class="my-2" />
-
-        <!-- Fila de copyright -->
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <p class="text-muted mb-0">
-              &copy; 2024 F1 Zone. Todos los derechos reservados.
-            </p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <a href="#" class="text-muted text-decoration-none me-3"
-              >Política de Privacidad</a
-            >
-            <a href="#" class="text-muted text-decoration-none me-3"
-              >Términos de Uso</a
-            >
-            <a href="#" class="text-muted text-decoration-none">Cookies</a>
-          </div>
+        <!-- Columna de enlaces rápidos -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="mb-3 text-light">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="../index.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="calendario.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Calendario
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none hover-light disabled" aria-disabled="true">
+                <i class="bi bi-chevron-right me-1"></i>Resultados
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="pilotos.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Pilotos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="equipos.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Equipos
+              </a>
+            </li>
+          </ul>
         </div>
-      </footer>
-    </div>
+
+        <!-- Columna de redes sociales -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Síguenos</h5>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <h5 class="mb-3 text-light">Contacto</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i>info@f1zone.com
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Newsletter</h5>
+          <p class="text-secondary mb-4">
+            Suscríbete para recibir las últimas noticias y actualizaciones.
+          </p>
+          <form class="mb-4">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control bg-dark text-light border-secondary" 
+                     placeholder="Tu email" aria-label="Email" aria-describedby="button-send-newsletter" />
+              <button class="btn btn-danger" type="button" id="button-send-newsletter">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="newsletterCheck" />
+              <label class="form-check-label text-secondary small" for="newsletterCheck">
+                Acepto recibir comunicaciones comerciales
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-2 border-secondary" />
+
+      <!-- Fila de copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="text-secondary mb-0">
+            &copy; 2024 F1 Zone. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-secondary text-decoration-none me-3">Política de Privacidad</a>
+          <a href="#" class="text-secondary text-decoration-none me-3">Términos de Uso</a>
+          <a href="#" class="text-secondary text-decoration-none">Cookies</a>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
