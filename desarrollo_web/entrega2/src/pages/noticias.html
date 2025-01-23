@@ -8,8 +8,6 @@
       content="F1 Zone - Noticias de Fórmula 1. Mantente al día con las últimas noticias de la temporada 2024."
     />
     <title>Noticias - F1 Zone</title>
-    <!-- Enlaces a CSS -->
-    <link rel="stylesheet" href="../assets/styles.css" />
 
     <!-- Enlaces externos -->
     <link
@@ -26,7 +24,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
-  </head>
+    <!--Estilos -->
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <!-- Fin Estilos -->
   </head>
   <body>
     <!-- Header con Bootstrap y enlaces actualizados -->
@@ -145,287 +145,330 @@
     </section>
 
     <!-- Sección Principal de Noticias -->
-    <section class="noticias-container">
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia1.jpg" alt="Noticia 1" />
-        <div class="noticia-info">
-          <h2>Red Bull domina en Baréin</h2>
-          <p>
-            Max Verstappen y Sergio Pérez logran un 1-2 en la primera carrera de
-            la temporada.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+    <section class="noticias-section">
+      <div class="container">
+        <h2 class="section-title">Últimas Noticias</h2>
+        <p class="section-subtitle">Mantente al día con toda la actualidad de la Fórmula 1</p>
+        
+        <div class="noticias-grid">
+          <!-- Noticia Principal -->
+          <article class="noticia-card noticia-destacada">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia1.jpg" alt="Red Bull domina en Baréin" />
+              <div class="noticia-categoria">Carrera</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 2 Mar 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 5 min</span>
+              </div>
+              <h3>Red Bull domina en Baréin</h3>
+              <p>Max Verstappen y Sergio Pérez logran un impresionante 1-2 en la primera carrera de la temporada, demostrando que Red Bull mantiene su supremacía en la F1.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia2.jpg" alt="Noticia 2" />
-        <div class="noticia-info">
-          <h2>Hamilton busca su octavo título</h2>
-          <p>
-            Lewis Hamilton está decidido a romper el récord de títulos mundiales
-            este año.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+          <!-- Noticias Secundarias -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia2.jpg" alt="Hamilton busca su octavo título" />
+              <div class="noticia-categoria">Pilotos</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 1 Mar 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 4 min</span>
+              </div>
+              <h3>Hamilton busca su octavo título</h3>
+              <p>Lewis Hamilton está decidido a romper el récord de títulos mundiales este año con Mercedes antes de su paso a Ferrari en 2025.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia3.jpg" alt="Noticia 3" />
-        <div class="noticia-info">
-          <h2>Ferrari presenta mejoras en su monoplaza</h2>
-          <p>
-            La Scuderia Ferrari ha introducido actualizaciones significativas
-            para mejorar su rendimiento.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+          <!-- Noticia 3 -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia3.jpg" alt="Ferrari mejora su rendimiento" />
+              <div class="noticia-categoria">Equipos</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 1 Mar 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 3 min</span>
+              </div>
+              <h3>Ferrari muestra mejoras significativas en su rendimiento</h3>
+              <p>El equipo italiano sorprende con un notable avance en su ritmo de carrera, con Leclerc y Sainz mostrando un rendimiento prometedor.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia4.jpg" alt="Noticia 4" />
-        <div class="noticia-info">
-          <h2>McLaren sorprende en clasificación</h2>
-          <p>
-            Lando Norris y Oscar Piastri clasifican en las primeras filas
-            mostrando el progreso del equipo británico.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+          <!-- Noticia 4 -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia4.jpg" alt="Alonso optimista" />
+              <div class="noticia-categoria">Pilotos</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 28 Feb 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 4 min</span>
+              </div>
+              <h3>Alonso se muestra optimista con el nuevo Aston Martin</h3>
+              <p>El piloto español confía en que el AMR24 será más competitivo que su predecesor y les permitirá luchar por podios regulares.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia5.jpg" alt="Noticia 5" />
-        <div class="noticia-info">
-          <h2>Aston Martin revoluciona su aerodinámica</h2>
-          <p>
-            El equipo presenta un nuevo paquete de actualizaciones que promete
-            mejorar significativamente el rendimiento.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+          <!-- Noticia 5 -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia5.jpg" alt="Cambios en el reglamento" />
+              <div class="noticia-categoria">Reglamento</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 27 Feb 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 5 min</span>
+              </div>
+              <h3>La FIA anuncia cambios en el reglamento para 2025</h3>
+              <p>Se introducirán modificaciones significativas en las regulaciones técnicas para promover carreras más competitivas.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia6.jpg" alt="Noticia 6" />
-        <div class="noticia-info">
-          <h2>Gran Premio de Las Vegas 2024</h2>
-          <p>
-            La FIA confirma cambios en el trazado urbano para mejorar las
-            oportunidades de adelantamiento.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+          <!-- Noticia 6 -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia6.jpg" alt="Nuevo circuito" />
+              <div class="noticia-categoria">Circuitos</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 26 Feb 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 3 min</span>
+              </div>
+              <h3>Madrid se prepara para recibir la F1 en 2026</h3>
+              <p>La capital española presenta los detalles de su nuevo circuito urbano que albergará el Gran Premio de Madrid.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia7.jpg" alt="Noticia 7" />
-        <div class="noticia-info">
-          <h2>Alpine presenta nuevo director técnico</h2>
-          <p>
-            El equipo francés refuerza su estructura técnica con un fichaje
-            estrella proveniente de un equipo top.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
+          <!-- Noticia 7 -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia7.jpg" alt="Desarrollo de motores" />
+              <div class="noticia-categoria">Tecnología</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 25 Feb 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 4 min</span>
+              </div>
+              <h3>Los equipos avanzan en el desarrollo de motores 2026</h3>
+              <p>Las nuevas regulaciones de motores para 2026 impulsan la innovación en tecnología híbrida y combustibles sostenibles.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
 
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia8.jpg" alt="Noticia 8" />
-        <div class="noticia-info">
-          <h2>Cambios en el reglamento para 2025</h2>
-          <p>
-            La FIA anuncia modificaciones importantes en las regulaciones
-            técnicas para la próxima temporada.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
+          <!-- Noticia 8 -->
+          <article class="noticia-card">
+            <div class="noticia-header">
+              <img src="../assets/images/noticias/noticia8.jpg" alt="Jóvenes talentos" />
+              <div class="noticia-categoria">F2</div>
+            </div>
+            <div class="noticia-content">
+              <div class="noticia-meta">
+                <span class="fecha"><i class="bi bi-calendar3"></i> 24 Feb 2024</span>
+                <span class="tiempo-lectura"><i class="bi bi-clock"></i> 3 min</span>
+              </div>
+              <h3>Los jóvenes talentos brillan en la F2</h3>
+              <p>La nueva generación de pilotos muestra su potencial en las primeras carreras de la temporada de Fórmula 2.</p>
+              <div class="noticia-footer">
+                <a href="#" class="btn-leer-mas">Leer Más <i class="bi bi-arrow-right"></i></a>
+                <div class="noticia-social">
+                  <a href="#"><i class="bi bi-share"></i></a>
+                  <a href="#"><i class="bi bi-bookmark"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <article class="noticia-card">
-        <img src="../assets/images/noticias/noticia9.jpg" alt="Noticia 9" />
-        <div class="noticia-info">
-          <h2>Récord de asistencia en Silverstone</h2>
-          <p>
-            El Gran Premio Británico establece un nuevo récord de asistencia con
-            más de 400,000 espectadores durante el fin de semana.
-          </p>
-          <a href="#" class="btn-leer-mas">Leer Más</a>
-        </div>
-      </article>
-
-      <!-- Agrega más artículos de noticias aquí -->
+      </div>
     </section>
 
     <!-- Footer mejorado con Bootstrap -->
-    <div class="container-fluid mt-2">
-      <footer class="py-4 px-5">
-        <hr class="my-2" />
-        <!-- Fila principal -->
-        <div class="row g-4">
-          <!-- Columna de información principal -->
-          <div class="col-lg-4 col-md-6">
-            <div>
-              <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
-              <h5>F1 Zone</h5>
-              <p class="text-muted">
-                Tu portal definitivo de Fórmula 1. Noticias, resultados,
-                estadísticas y toda la información del mundo del automovilismo.
-              </p>
-            </div>
-            <div class="mb-4">
-              <h6 class="mb-3">Descarga nuestra App</h6>
-              <div class="d-flex gap-2">
-                <a href="#" class="btn btn-outline-light btn-sm">
-                  <i class="bi bi-apple me-2"></i>App Store
-                </a>
-                <a href="#" class="btn btn-outline-light btn-sm">
-                  <i class="bi bi-google-play me-2"></i>Play Store
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna de enlaces rápidos -->
-          <div class="col-lg-2 col-md-6">
-            <h5 class="mb-3">Enlaces Rápidos</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a
-                  href="../index.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Inicio
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="calendario.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Calendario
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="#"
-                  class="text-muted text-decoration-none hover-light disabled"
-                  aria-disabled="true"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Resultados
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="pilotos.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Pilotos
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="equipos.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Equipos
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna de redes sociales -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="mb-3">Síguenos</h5>
-            <div class="d-flex gap-3 mb-4">
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-twitter-x"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-instagram"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-youtube"></i>
-              </a>
-            </div>
-            <h5 class="mb-3">Contacto</h5>
-            <ul class="list-unstyled text-muted">
-              <li class="mb-2">
-                <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-envelope me-2"></i>info@f1zone.com
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna de newsletter -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="mb-3">Newsletter</h5>
-            <p class="text-muted mb-4">
-              Suscríbete para recibir las últimas noticias y actualizaciones.
+    <footer class="bg-dark text-light py-4 px-5">
+      <hr class="my-2 border-secondary" />
+      <!-- Fila principal -->
+      <div class="row g-4">
+        <!-- Columna de información principal -->
+        <div class="col-lg-4 col-md-6">
+          <div>
+            <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
+            <h5 class="text-light">F1 Zone</h5>
+            <p class="text-secondary">
+              Tu portal definitivo de Fórmula 1. Noticias, resultados,
+              estadísticas y toda la información del mundo del automovilismo.
             </p>
-            <form class="mb-4">
-              <div class="input-group mb-2">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  aria-label="Email"
-                  aria-describedby="button-send-newsletter"
-                />
-                <button
-                  class="btn btn-danger"
-                  type="button"
-                  id="button-send-newsletter"
-                >
-                  <i class="bi bi-send-fill"></i>
-                </button>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="newsletterCheck"
-                />
-                <label
-                  class="form-check-label text-muted small"
-                  for="newsletterCheck"
-                >
-                  Acepto recibir comunicaciones comerciales
-                </label>
-              </div>
-            </form>
+          </div>
+          <div class="mb-4">
+            <h6 class="mb-3 text-light">Descarga nuestra App</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-apple me-2"></i>App Store
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-google-play me-2"></i>Play Store
+              </a>
+            </div>
           </div>
         </div>
 
-        <hr class="my-2" />
-
-        <!-- Fila de copyright -->
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <p class="text-muted mb-0">
-              &copy; 2024 F1 Zone. Todos los derechos reservados.
-            </p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <a href="#" class="text-muted text-decoration-none me-3"
-              >Política de Privacidad</a
-            >
-            <a href="#" class="text-muted text-decoration-none me-3"
-              >Términos de Uso</a
-            >
-            <a href="#" class="text-muted text-decoration-none">Cookies</a>
-          </div>
+        <!-- Columna de enlaces rápidos -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="mb-3 text-light">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="../index.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="calendario.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Calendario
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none hover-light disabled" aria-disabled="true">
+                <i class="bi bi-chevron-right me-1"></i>Resultados
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="pilotos.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Pilotos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="equipos.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Equipos
+              </a>
+            </li>
+          </ul>
         </div>
-      </footer>
-    </div>
+
+        <!-- Columna de redes sociales -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Síguenos</h5>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <h5 class="mb-3 text-light">Contacto</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i>info@f1zone.com
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Newsletter</h5>
+          <p class="text-secondary mb-4">
+            Suscríbete para recibir las últimas noticias y actualizaciones.
+          </p>
+          <form class="mb-4">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control bg-dark text-light border-secondary" 
+                     placeholder="Tu email" aria-label="Email" aria-describedby="button-send-newsletter" />
+              <button class="btn btn-danger" type="button" id="button-send-newsletter">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="newsletterCheck" />
+              <label class="form-check-label text-secondary small" for="newsletterCheck">
+                Acepto recibir comunicaciones comerciales
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-2 border-secondary" />
+
+      <!-- Fila de copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="text-secondary mb-0">
+            &copy; 2024 F1 Zone. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-secondary text-decoration-none me-3">Política de Privacidad</a>
+          <a href="#" class="text-secondary text-decoration-none me-3">Términos de Uso</a>
+          <a href="#" class="text-secondary text-decoration-none">Cookies</a>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

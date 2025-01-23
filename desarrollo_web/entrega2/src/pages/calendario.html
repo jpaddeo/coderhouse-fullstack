@@ -9,9 +9,6 @@
     />
     <title>Calendario 2024 - F1 Zone</title>
 
-    <!-- Enlaces a CSS -->
-    <link rel="stylesheet" href="../assets/styles.css" />
-
     <!-- Enlaces externos -->
     <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap"
@@ -27,6 +24,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!--Estilos -->
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <!-- Fin Estilos -->
   </head>
   <body>
     <!-- Header con Bootstrap y enlaces actualizados -->
@@ -150,310 +150,291 @@
       </section>
 
       <!-- Sección Principal de Calendario -->
-      <section class="calendario-container">
-        <table class="calendario-table">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Gran Premio</th>
-              <th>Ubicación</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>3 de marzo</td>
-              <td>Gran Premio de Baréin</td>
-              <td>Sakhir</td>
-            </tr>
-            <tr>
-              <td>10 de marzo</td>
-              <td>Gran Premio de Arabia Saudita</td>
-              <td>Jeddah</td>
-            </tr>
-            <tr>
-              <td>24 de marzo</td>
-              <td>Gran Premio de Australia</td>
-              <td>Melbourne</td>
-            </tr>
-            <tr>
-              <td>7 de abril</td>
-              <td>Gran Premio de China</td>
-              <td>Shanghái</td>
-            </tr>
-            <tr>
-              <td>21 de abril</td>
-              <td>Gran Premio de Azerbaiyán</td>
-              <td>Bakú</td>
-            </tr>
-            <tr>
-              <td>5 de mayo</td>
-              <td>Gran Premio de Miami</td>
-              <td>Miami</td>
-            </tr>
-            <tr>
-              <td>19 de mayo</td>
-              <td>Gran Premio de Emilia-Romaña</td>
-              <td>Imola</td>
-            </tr>
-            <tr>
-              <td>26 de mayo</td>
-              <td>Gran Premio de Mónaco</td>
-              <td>Mónaco</td>
-            </tr>
-            <tr>
-              <td>9 de junio</td>
-              <td>Gran Premio de Canadá</td>
-              <td>Montreal</td>
-            </tr>
-            <tr>
-              <td>23 de junio</td>
-              <td>Gran Premio de España</td>
-              <td>Barcelona</td>
-            </tr>
-            <tr>
-              <td>30 de junio</td>
-              <td>Gran Premio de Austria</td>
-              <td>Spielberg</td>
-            </tr>
-            <tr>
-              <td>7 de julio</td>
-              <td>Gran Premio de Gran Bretaña</td>
-              <td>Silverstone</td>
-            </tr>
-            <tr>
-              <td>21 de julio</td>
-              <td>Gran Premio de Hungría</td>
-              <td>Budapest</td>
-            </tr>
-            <tr>
-              <td>28 de julio</td>
-              <td>Gran Premio de Bélgica</td>
-              <td>Spa-Francorchamps</td>
-            </tr>
-            <tr>
-              <td>25 de agosto</td>
-              <td>Gran Premio de Países Bajos</td>
-              <td>Zandvoort</td>
-            </tr>
-            <tr>
-              <td>1 de septiembre</td>
-              <td>Gran Premio de Italia</td>
-              <td>Monza</td>
-            </tr>
-            <tr>
-              <td>15 de septiembre</td>
-              <td>Gran Premio de Singapur</td>
-              <td>Singapur</td>
-            </tr>
-            <tr>
-              <td>29 de septiembre</td>
-              <td>Gran Premio de Japón</td>
-              <td>Suzuka</td>
-            </tr>
-            <tr>
-              <td>13 de octubre</td>
-              <td>Gran Premio de Catar</td>
-              <td>Losail</td>
-            </tr>
-            <tr>
-              <td>27 de octubre</td>
-              <td>Gran Premio de Estados Unidos</td>
-              <td>Austin</td>
-            </tr>
-            <tr>
-              <td>3 de noviembre</td>
-              <td>Gran Premio de México</td>
-              <td>Ciudad de México</td>
-            </tr>
-            <tr>
-              <td>17 de noviembre</td>
-              <td>Gran Premio de Brasil</td>
-              <td>Sao Paulo</td>
-            </tr>
-            <tr>
-              <td>24 de noviembre</td>
-              <td>Gran Premio de Las Vegas</td>
-              <td>Las Vegas</td>
-            </tr>
-            <tr>
-              <td>8 de diciembre</td>
-              <td>Gran Premio de Abu Dabi</td>
-              <td>Yas Marina</td>
-            </tr>
-          </tbody>
-        </table>
+      <section class="calendario-section">
+        <div class="container">
+          <h2 class="section-title">Calendario Completo</h2>
+          <p class="section-subtitle">Todas las fechas de la temporada 2024 de Fórmula 1</p>
+          
+          <div class="calendario-grid">
+            <!-- GP de Baréin -->
+            <div class="carrera-card">
+              <div class="carrera-fecha">
+                <span class="dia">2</span>
+                <span class="mes">MAR</span>
+              </div>
+              <div class="carrera-info">
+                <div class="carrera-detalles">
+                  <h3>Gran Premio de Baréin</h3>
+                  <div class="circuito">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Circuito Internacional de Baréin
+                  </div>
+                  <div class="carrera-meta">
+                    <span class="horario">
+                      <i class="bi bi-clock-fill"></i>
+                      16:00 (hora local)
+                    </span>
+                  </div>
+                </div>
+                <div class="carrera-estado estado-completado">Completado</div>
+              </div>
+            </div>
+
+            <!-- GP de Arabia Saudita -->
+            <div class="carrera-card">
+              <div class="carrera-fecha">
+                <span class="dia">9</span>
+                <span class="mes">MAR</span>
+              </div>
+              <div class="carrera-info">
+                <div class="carrera-detalles">
+                  <h3>Gran Premio de Arabia Saudita</h3>
+                  <div class="circuito">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Circuito de la Corniche de Yeda
+                  </div>
+                  <div class="carrera-meta">
+                    <span class="horario">
+                      <i class="bi bi-clock-fill"></i>
+                      18:00 (hora local)
+                    </span>
+                  </div>
+                </div>
+                <div class="carrera-estado estado-completado">Completado</div>
+              </div>
+            </div>
+
+            <!-- GP de Australia -->
+            <div class="carrera-card">
+              <div class="carrera-fecha">
+                <span class="dia">24</span>
+                <span class="mes">MAR</span>
+              </div>
+              <div class="carrera-info">
+                <div class="carrera-detalles">
+                  <h3>Gran Premio de Australia</h3>
+                  <div class="circuito">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Circuito de Albert Park
+                  </div>
+                  <div class="carrera-meta">
+                    <span class="horario">
+                      <i class="bi bi-clock-fill"></i>
+                      15:00 (hora local)
+                    </span>
+                  </div>
+                </div>
+                <div class="carrera-estado estado-encurso">En curso</div>
+              </div>
+            </div>
+
+            <!-- GP de Japón -->
+            <div class="carrera-card">
+              <div class="carrera-fecha">
+                <span class="dia">7</span>
+                <span class="mes">ABR</span>
+              </div>
+              <div class="carrera-info">
+                <div class="carrera-detalles">
+                  <h3>Gran Premio de Japón</h3>
+                  <div class="circuito">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Circuito de Suzuka
+                  </div>
+                  <div class="carrera-meta">
+                    <span class="horario">
+                      <i class="bi bi-clock-fill"></i>
+                      14:00 (hora local)
+                    </span>
+                  </div>
+                </div>
+                <div class="carrera-estado estado-proximo">Próxima</div>
+              </div>
+            </div>
+
+            <!-- GP de China -->
+            <div class="carrera-card">
+              <div class="carrera-fecha">
+                <span class="dia">21</span>
+                <span class="mes">ABR</span>
+              </div>
+              <div class="carrera-info">
+                <div class="carrera-detalles">
+                  <h3>Gran Premio de China</h3>
+                  <div class="circuito">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Circuito Internacional de Shanghái
+                  </div>
+                  <div class="carrera-meta">
+                    <span class="horario">
+                      <i class="bi bi-clock-fill"></i>
+                      15:00 (hora local)
+                    </span>
+                  </div>
+                </div>
+                <div class="carrera-estado estado-proximo">Próxima</div>
+              </div>
+            </div>
+
+            <!-- GP de Miami -->
+            <div class="carrera-card">
+              <div class="carrera-fecha">
+                <span class="dia">5</span>
+                <span class="mes">MAY</span>
+              </div>
+              <div class="carrera-info">
+                <div class="carrera-detalles">
+                  <h3>Gran Premio de Miami</h3>
+                  <div class="circuito">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Autódromo Internacional de Miami
+                  </div>
+                  <div class="carrera-meta">
+                    <span class="horario">
+                      <i class="bi bi-clock-fill"></i>
+                      16:00 (hora local)
+                    </span>
+                  </div>
+                </div>
+                <div class="carrera-estado estado-proximo">Próxima</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- Footer mejorado con Bootstrap -->
-    <div class="container-fluid mt-2">
-      <footer class="py-4 px-5">
-        <hr class="my-2" />
-        <!-- Fila principal -->
-        <div class="row g-4">
-          <!-- Columna de información principal -->
-          <div class="col-lg-4 col-md-6">
-            <div>
-              <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
-              <h5>F1 Zone</h5>
-              <p class="text-muted">
-                Tu portal definitivo de Fórmula 1. Noticias, resultados,
-                estadísticas y toda la información del mundo del automovilismo.
-              </p>
-            </div>
-            <div class="mb-4">
-              <h6 class="mb-3">Descarga nuestra App</h6>
-              <div class="d-flex gap-2">
-                <a href="#" class="btn btn-outline-light btn-sm">
-                  <i class="bi bi-apple me-2"></i>App Store
-                </a>
-                <a href="#" class="btn btn-outline-light btn-sm">
-                  <i class="bi bi-google-play me-2"></i>Play Store
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna de enlaces rápidos -->
-          <div class="col-lg-2 col-md-6">
-            <h5 class="mb-3">Enlaces Rápidos</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <a
-                  href="../index.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Inicio
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="calendario.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Calendario
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="#"
-                  class="text-muted text-decoration-none hover-light disabled"
-                  aria-disabled="true"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Resultados
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="pilotos.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Pilotos
-                </a>
-              </li>
-              <li class="mb-2">
-                <a
-                  href="equipos.html"
-                  class="text-muted text-decoration-none hover-light"
-                >
-                  <i class="bi bi-chevron-right me-1"></i>Equipos
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna de redes sociales -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="mb-3">Síguenos</h5>
-            <div class="d-flex gap-3 mb-4">
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-twitter-x"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-instagram"></i>
-              </a>
-              <a href="#" class="text-muted fs-4 hover-light">
-                <i class="bi bi-youtube"></i>
-              </a>
-            </div>
-            <h5 class="mb-3">Contacto</h5>
-            <ul class="list-unstyled text-muted">
-              <li class="mb-2">
-                <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-envelope me-2"></i>info@f1zone.com
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna de newsletter -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="mb-3">Newsletter</h5>
-            <p class="text-muted mb-4">
-              Suscríbete para recibir las últimas noticias y actualizaciones.
+    <footer class="bg-dark text-light py-4 px-5">
+      <hr class="my-2 border-secondary" />
+      <!-- Fila principal -->
+      <div class="row g-4">
+        <!-- Columna de información principal -->
+        <div class="col-lg-4 col-md-6">
+          <div>
+            <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
+            <h5 class="text-light">F1 Zone</h5>
+            <p class="text-secondary">
+              Tu portal definitivo de Fórmula 1. Noticias, resultados,
+              estadísticas y toda la información del mundo del automovilismo.
             </p>
-            <form class="mb-4">
-              <div class="input-group mb-2">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Tu email"
-                  aria-label="Email"
-                  aria-describedby="button-send-newsletter"
-                />
-                <button
-                  class="btn btn-danger"
-                  type="button"
-                  id="button-send-newsletter"
-                >
-                  <i class="bi bi-send-fill"></i>
-                </button>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="newsletterCheck"
-                />
-                <label
-                  class="form-check-label text-muted small"
-                  for="newsletterCheck"
-                >
-                  Acepto recibir comunicaciones comerciales
-                </label>
-              </div>
-            </form>
+          </div>
+          <div class="mb-4">
+            <h6 class="mb-3 text-light">Descarga nuestra App</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-apple me-2"></i>App Store 
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-google-play me-2"></i>Play Store
+              </a>
+            </div>
           </div>
         </div>
 
-        <hr class="my-2" />
-
-        <!-- Fila de copyright -->
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <p class="text-muted mb-0">
-              &copy; 2024 F1 Zone. Todos los derechos reservados.
-            </p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <a href="#" class="text-muted text-decoration-none me-3"
-              >Política de Privacidad</a
-            >
-            <a href="#" class="text-muted text-decoration-none me-3"
-              >Términos de Uso</a
-            >
-            <a href="#" class="text-muted text-decoration-none">Cookies</a>
-          </div>
+        <!-- Columna de enlaces rápidos -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="mb-3 text-light">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a href="../index.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="calendario.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Calendario
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-secondary text-decoration-none hover-light disabled" aria-disabled="true">
+                <i class="bi bi-chevron-right me-1"></i>Resultados
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="pilotos.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Pilotos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="equipos.html" class="text-secondary text-decoration-none hover-light">
+                <i class="bi bi-chevron-right me-1"></i>Equipos
+              </a>
+            </li>
+          </ul>
         </div>
-      </footer>
-    </div>
+
+        <!-- Columna de redes sociales -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Síguenos</h5>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <h5 class="mb-3 text-light">Contacto</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i>info@f1zone.com
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Newsletter</h5>
+          <p class="text-secondary mb-4">
+            Suscríbete para recibir las últimas noticias y actualizaciones.
+          </p>
+          <form class="mb-4">
+            <div class="input-group mb-2">
+              <input type="email" class="form-control bg-dark text-light border-secondary" 
+                     placeholder="Tu email" aria-label="Email" aria-describedby="button-send-newsletter" />
+              <button class="btn btn-danger" type="button" id="button-send-newsletter">
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="newsletterCheck" />
+              <label class="form-check-label text-secondary small" for="newsletterCheck">
+                Acepto recibir comunicaciones comerciales
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-2 border-secondary" />
+
+      <!-- Fila de copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="text-secondary mb-0">
+            &copy; 2024 F1 Zone. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-secondary text-decoration-none me-3">Política de Privacidad</a>
+          <a href="#" class="text-secondary text-decoration-none me-3">Términos de Uso</a>
+          <a href="#" class="text-secondary text-decoration-none">Cookies</a>
+        </div>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
