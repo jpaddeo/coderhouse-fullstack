@@ -35,7 +35,7 @@ Se puede consultar desde el siguiente link [desarrollo_web/entrega2](desarrollo_
 
 ### Entrega 3
 
-Se puede consultar desde el siguiente link [desarrollo_web/entrega2](desarrollo_web/entrega3)
+Se puede consultar desde el siguiente link [desarrollo_web/entrega3](desarrollo_web/entrega3)
 
 ### Entrega Final
 
