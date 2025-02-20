@@ -1,14 +1,14 @@
 name: Deploy static content to Pages
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   workflow_dispatch:
 permissions:
   contents: read
   pages: write
   id-token: write
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 jobs:
   deploy:
@@ -24,7 +24,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './desarrollo_web/entrega_final/'
+          path: './desarrollo_web/entrega_final/src/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
