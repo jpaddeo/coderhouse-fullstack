@@ -1,7 +1,7 @@
 {
-  "name": "entrega3",
+  "name": "entregafinal",
   "version": "1.0.0",
-  "description": "Entrega 3 del curso Desarrollo Web",
+  "description": "Entrega Final del curso Desarrollo Web",
   "main": "index.js",
   "type": "module",
   "scripts": {
