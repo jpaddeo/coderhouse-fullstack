@@ -39,4 +39,4 @@ Se puede consultar desde el siguiente link [desarrollo_web/entrega3](desarrollo_
 
 ### Entrega Final
 
-TBD.
+Se puede consultar desde el siguiente link [desarrollo_web/entrega_final](desarrollo_web/entrega_final)
