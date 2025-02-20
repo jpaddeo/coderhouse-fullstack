@@ -1,0 +1,15 @@
+{
+  "name": "coooooooooder",
+  "version": "1.0.0",
+  "description": "Repositorio para entregas de Carrera de Desarrollo Fullstack realizada en modalidad flex.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}

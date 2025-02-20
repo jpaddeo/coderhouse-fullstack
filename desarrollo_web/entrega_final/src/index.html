@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="F1 Zone - Tu portal definitivo de Fórmula 1. Noticias, resultados, calendario y más."
+    />
+    <title>F1 Zone - Tu portal de Fórmula 1</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fin Fonts -->
+
+    <!-- Libs externas -->
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Fin FontAwesome -->
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Fin Bootstrap -->
+    <!--Estilos -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Fin Estilos -->
+
+    <!-- SEO Metatags -->
+    <meta
+      name="keywords"
+      content="Fórmula 1, F1, carreras, automovilismo, Gran Premio, pilotos F1, equipos F1, noticias F1"
+    />
+    <meta name="author" content="F1 Zone" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="F1 Zone - Tu portal definitivo de Fórmula 1"
+    />
+    <meta
+      property="og:description"
+      content="F1 Zone - Tu portal definitivo de Fórmula 1. Noticias, resultados, calendario y más."
+    />
+    <meta property="og:image" content="./assets/images/logo.png" />
+    <meta property="og:url" content="https://f1zone.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://f1zone.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+  </head>
+  <body>
+    <!-- Header con Bootstrap y enlaces actualizados -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/images/logo.png" class="logo" alt="F1 Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f1MenuContent"
+            aria-controls="f1MenuContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="f1MenuContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="bi bi-house-fill me-1"></i>&nbsp;Inicio
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-calendar-event-fill me-1"></i>Calendario
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./pages/calendario.html"
+                      >Calendario 2024</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      href="#"
+                      aria-disabled="true"
+                      >Resultados</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      href="#"
+                      aria-disabled="true"
+                      >Próxima carrera</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-people-fill me-1"></i>Equipos y Pilotos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./pages/equipos.html"
+                      >Equipos</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./pages/pilotos.html"
+                      >Pilotos</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Histórico</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/noticias.html">
+                  <i class="bi bi-newspaper me-1"></i>&nbsp;Noticias
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/tienda.html">
+                  <i class="bi bi-shop me-1"></i>&nbsp;Tienda
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <div class="input-group mb-2">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Buscar..."
+                  aria-label="Buscar"
+                  aria-describedby="button-search"
+                />
+                <button class="btn btn-danger" type="submit" id="button-search">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero hero-inicio">
+      <div class="hero-content">
+        <h1>Bienvenido a F1 Zone</h1>
+        <p>Tu fuente definitiva de información sobre Fórmula 1</p>
+        <div class="hero-buttons">
+          <a href="./pages/calendario.html" class="btn primary"
+            >Ver Calendario</a
+          >
+          <a href="./pages/noticias.html" class="btn secondary"
+            >Últimas Noticias</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Destacados -->
+    <section class="destacados">
+      <h2>Destacados</h2>
+      <div class="destacados-grid">
+        <article class="destacado-card">
+          <img
+            src="./assets/images/destacados/destacado1.jpg"
+            alt="Gran Premio de Mónaco 2024 - Vista del circuito y yates en el puerto"
+            loading="lazy"
+          />
+          <div class="destacado-info">
+            <h3>Gran Premio de Mónaco</h3>
+            <p>
+              Descubre todo sobre la carrera más glamorosa del calendario de F1.
+            </p>
+            <a href="#" class="btn-leer-mas">Leer Más</a>
+          </div>
+        </article>
+
+        <article class="destacado-card">
+          <img
+            src="./assets/images/destacados/destacado2.jpg"
+            alt="Destacado 2"
+          />
+          <div class="destacado-info">
+            <h3>Historia de la F1</h3>
+            <p>Un recorrido por los momentos más icónicos de la Fórmula 1.</p>
+            <a href="#" class="btn-leer-mas">Leer Más</a>
+          </div>
+        </article>
+
+        <article class="destacado-card">
+          <img
+            src="./assets/images/destacados/destacado3.jpg"
+            alt="Destacado 3"
+          />
+          <div class="destacado-info">
+            <h3>Equipos y Pilotos</h3>
+            <p>Conoce a los protagonistas de la temporada 2024.</p>
+            <a href="#" class="btn-leer-mas">Leer Más</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección de Noticias Recientes -->
+    <section class="noticias-recientes">
+      <h2>Noticias Recientes</h2>
+      <div class="noticias-grid">
+        <article class="noticia-card">
+          <img src="./assets/images/noticias/noticia1.jpg" alt="Noticia 1" />
+          <div class="noticia-info">
+            <h3>Red Bull domina en Baréin</h3>
+            <p>
+              Max Verstappen y Sergio Pérez logran un 1-2 en la primera carrera
+              de la temporada.
+            </p>
+            <a href="#" class="btn-leer-mas">Leer Más</a>
+          </div>
+        </article>
+
+        <article class="noticia-card">
+          <img src="./assets/images/noticias/noticia2.jpg" alt="Noticia 2" />
+          <div class="noticia-info">
+            <h3>Hamilton busca su octavo título</h3>
+            <p>
+              Lewis Hamilton está decidido a romper el récord de títulos
+              mundiales este año.
+            </p>
+            <a href="#" class="btn-leer-mas">Leer Más</a>
+          </div>
+        </article>
+
+        <article class="noticia-card">
+          <img src="./assets/images/noticias/noticia3.jpg" alt="Noticia 3" />
+          <div class="noticia-info">
+            <h3>Ferrari presenta mejoras en su monoplaza</h3>
+            <p>
+              La Scuderia Ferrari ha introducido actualizaciones significativas
+              para mejorar su rendimiento.
+            </p>
+            <a href="#" class="btn-leer-mas">Leer Más</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer mejorado con Bootstrap -->
+    <footer class="bg-dark text-light py-4 px-5">
+      <hr class="my-2 border-secondary" />
+      <!-- Fila principal -->
+      <div class="row g-4">
+        <!-- Columna de información principal -->
+        <div class="col-lg-4 col-md-6">
+          <div>
+            <img src="./assets/images/logo.png" class="logo" alt="F1 Logo" />
+            <h5 class="text-light">F1 Zone</h5>
+            <p class="text-secondary">
+              Tu portal definitivo de Fórmula 1. Noticias, resultados,
+              estadísticas y toda la información del mundo del automovilismo.
+            </p>
+          </div>
+          <div class="mb-4">
+            <h6 class="mb-3 text-light">Descarga nuestra App</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-apple me-2"></i>App Store
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-google-play me-2"></i>Play Store
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de enlaces rápidos -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="mb-3 text-light">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a
+                href="./index.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="./pages/calendario.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Calendario
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="#"
+                class="text-secondary text-decoration-none hover-light disabled"
+                aria-disabled="true"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Resultados
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="./pages/pilotos.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Pilotos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="./pages/equipos.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Equipos
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de redes sociales -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Síguenos</h5>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <h5 class="mb-3 text-light">Contacto</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i>info@f1zone.com
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Newsletter</h5>
+          <p class="text-secondary mb-4">
+            Suscríbete para recibir las últimas noticias y actualizaciones.
+          </p>
+          <form class="mb-4">
+            <div class="input-group mb-2">
+              <input
+                type="email"
+                class="form-control bg-dark text-light border-secondary"
+                placeholder="Tu email"
+                aria-label="Email"
+                aria-describedby="button-send-newsletter"
+              />
+              <button
+                class="btn btn-danger"
+                type="button"
+                id="button-send-newsletter"
+              >
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="newsletterCheck"
+              />
+              <label
+                class="form-check-label text-secondary small"
+                for="newsletterCheck"
+              >
+                Acepto recibir comunicaciones comerciales
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-2 border-secondary" />
+
+      <!-- Fila de copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="text-secondary mb-0">
+            &copy; 2024 F1 Zone. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-secondary text-decoration-none me-3"
+            >Política de Privacidad</a
+          >
+          <a href="#" class="text-secondary text-decoration-none me-3"
+            >Términos de Uso</a
+          >
+          <a href="#" class="text-secondary text-decoration-none">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

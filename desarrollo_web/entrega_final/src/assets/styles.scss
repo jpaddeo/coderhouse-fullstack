@@ -1,0 +1,621 @@
+@use 'sass:map';
+@use 'sass:color';
+
+/* Variables globales */
+$f1-colors: (
+  'red': #e10600,
+  'dark': #15151e,
+  'gray': #38383f,
+  'light': #ffffff,
+);
+
+$transition: all 0.3s ease;
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+$border-radius: 12px;
+
+// Variables
+$colors: (
+  'primary': #dc3545,
+  'primary-dark': #c82333,
+  'dark': #333,
+  'muted': #666,
+  'white': #fff,
+  'light-bg': #f8f9fa,
+);
+
+$shadows: (
+  'sm': 0 4px 6px rgba(0, 0, 0, 0.1),
+  'md': 0 4px 15px rgba(0, 0, 0, 0.1),
+  'lg': 0 8px 25px rgba(0, 0, 0, 0.15),
+);
+
+$transition-base: all 0.3s ease;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-transform($y: -5px) {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY($y);
+  }
+}
+
+@mixin media-breakpoint($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@mixin hero-section($image) {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url($image) center/cover;
+  padding: 120px 0;
+  margin-top: 76px;
+  text-align: center;
+}
+
+@mixin card-hover {
+  transition: $transition-base;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: map-get($shadows, 'lg');
+  }
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.6;
+  background-color: map.get($f1-colors, 'light');
+  color: map.get($f1-colors, 'dark');
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+
+/* Tipografía base */
+%heading-base {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  color: map.get($f1-colors, 'dark');
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    @extend %heading-base;
+    font-size: 4.1rem - ($i * 0.6);
+  }
+}
+
+/* Estilos base para elementos comunes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: 15px;
+    text-align: left;
+  }
+}
+
+/* Utilidades de espaciado */
+@each $space in (1, 2, 3) {
+  .mb-#{$space} {
+    margin-bottom: #{$space}rem;
+  }
+  .mt-#{$space} {
+    margin-top: #{$space}rem;
+  }
+}
+
+/* Utilidades de color */
+@each $name, $color in $f1-colors {
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+/* Animaciones */
+@mixin keyframe-animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframe-animation(fadeInDown) {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframe-animation(fadeInUp) {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframe-animation(pulse) {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+
+  &-track {
+    background: map.get($f1-colors, 'dark');
+  }
+
+  &-thumb {
+    background: map.get($f1-colors, 'red');
+    border-radius: 5px;
+
+    &:hover {
+      background: #ff0700;
+    }
+  }
+}
+
+/* Componentes */
+.logo {
+  aspect-ratio: 16/9;
+  max-width: 200px;
+}
+
+.navbar-nav {
+  li {
+    a {
+      text-decoration: none;
+      letter-spacing: 0.75px;
+      transition: $transition;
+      position: relative;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: $border-radius;
+
+      &:hover {
+        background-color: rgba(map.get($f1-colors, 'red'), 0.1);
+      }
+    }
+
+    &:not(.dropdown) a {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 15px;
+        right: 15px;
+        height: 2px;
+        background-color: map.get($f1-colors, 'red');
+        transform: scaleX(0);
+        transition: $transition;
+        border: none !important;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+/* Hero Sections */
+.hero {
+  &-inicio {
+    @include hero-section('../images/hero-inicio.jpg');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .hero-content {
+      max-width: 800px;
+      padding: 2rem;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: 800;
+        color: map-get($colors, 'white');
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 1.5rem;
+        color: map-get($colors, 'white');
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  &-tienda {
+    @include hero-section('../images/hero-tienda.jpg');
+  }
+  &-equipos {
+    @include hero-section('../images/hero-equipos.jpg');
+  }
+  &-pilotos {
+    @include hero-section('../images/hero-pilotos.jpg');
+  }
+  &-calendario {
+    @include hero-section('../images/hero-calendario.jpg');
+  }
+}
+
+/* Cards */
+.producto-card,
+.equipo-card,
+.piloto-card,
+.carrera-card {
+  @include card-hover;
+  background: map-get($colors, 'white');
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: map-get($shadows, 'md');
+
+  .producto-header,
+  .equipo-header,
+  .piloto-header {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 1rem;
+      background-color: map-get($colors, 'light-bg');
+      transition: transform 0.5s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.08);
+    }
+  }
+}
+
+/* Tema oscuro */
+.dark-theme {
+  background-color: map.get($f1-colors, 'dark');
+  color: map.get($f1-colors, 'light');
+
+  .destacados {
+    background-color: map.get($f1-colors, 'gray');
+  }
+
+  .destacado-card,
+  .noticia-card,
+  .equipo-card,
+  .piloto-card {
+    background: linear-gradient(
+      145deg,
+      map.get($f1-colors, 'gray'),
+      map.get($f1-colors, 'dark')
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .piloto,
+  .equipo-detalles {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .equipo-detalles li {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Media Queries */
+@include media-breakpoint(mobile) {
+  .navbar-collapse {
+    background-color: map.get($f1-colors, 'dark');
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .destacados-grid,
+  .noticias-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+}
+
+/* Secciones del Index */
+%section-base {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.destacados,
+.noticias-recientes {
+  @extend %section-base;
+}
+
+/* Destacados */
+.destacados {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+%grid-base {
+  display: grid;
+  gap: 2.5rem;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.destacados-grid {
+  @extend %grid-base;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.destacado-card {
+  @extend %card-base;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.destacado-info {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: map.get($f1-colors, 'dark');
+    font-weight: 700;
+  }
+
+  p {
+    color: map.get($f1-colors, 'gray');
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Noticias Recientes */
+.noticias-recientes {
+  background-color: map.get($f1-colors, 'light');
+}
+
+.noticias-grid {
+  @extend %grid-base;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.noticia-card {
+  position: relative;
+}
+
+.noticia-categoria {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: map.get($f1-colors, 'red');
+  color: map.get($f1-colors, 'light');
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.noticia-info {
+  padding: 2rem;
+  background: map.get($f1-colors, 'light');
+}
+
+.noticia-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  color: map.get($f1-colors, 'gray');
+  font-size: 0.9rem;
+
+  i {
+    color: map.get($f1-colors, 'red');
+  }
+}
+
+.noticia-info {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: map.get($f1-colors, 'dark');
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  p {
+    color: map.get($f1-colors, 'gray');
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.btn-leer-mas {
+  display: inline-flex;
+  align-items: center;
+  color: map.get($f1-colors, 'red');
+  font-weight: 600;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: color.adjust(map.get($f1-colors, 'red'), $lightness: -10%);
+    transform: translateX(5px);
+  }
+
+  i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+}
+
+/* Media Queries */
+@include media-breakpoint(mobile) {
+  .destacados-grid,
+  .noticias-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .destacado-card,
+  .noticia-card {
+    img {
+      height: 220px;
+    }
+  }
+
+  .destacado-info,
+  .noticia-info {
+    padding: 1.5rem;
+  }
+
+  .noticia-meta {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@include media-breakpoint(tablet) {
+  .destacados-grid,
+  .noticias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Grids */
+.productos-grid,
+.equipos-grid,
+.pilotos-grid,
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Buttons */
+.btn {
+  &-agregar,
+  &-mas-info {
+    background: map-get($colors, 'primary');
+    color: map-get($colors, 'white');
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: $transition-base;
+    border: none;
+
+    &:hover {
+      background: map-get($colors, 'primary-dark');
+      transform: translateY(-2px);
+    }
+  }
+
+  &-favorito {
+    border: 2px solid map-get($colors, 'primary');
+    color: map-get($colors, 'primary');
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: $transition-base;
+
+    &:hover {
+      background: map-get($colors, 'primary');
+      color: map-get($colors, 'white');
+    }
+  }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .hero-content {
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .producto-header,
+  .equipo-header,
+  .piloto-header {
+    height: 180px;
+  }
+}

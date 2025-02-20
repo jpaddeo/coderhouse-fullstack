@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="F1 Zone - Tienda oficial de merchandising de Fórmula 1"
+    />
+    <title>Tienda - F1 Zone</title>
+
+    <!-- Enlaces externos -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!--Estilos -->
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <!-- Fin Estilos -->
+  </head>
+  <body>
+    <!-- Header con Bootstrap y enlaces actualizados -->
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#f1MenuContent"
+            aria-controls="f1MenuContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="f1MenuContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="../index.html">
+                  <i class="bi bi-house-fill me-1"></i>&nbsp;Inicio
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-calendar-event-fill me-1"></i>Calendario
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="calendario.html"
+                      >Calendario 2024</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      href="#"
+                      aria-disabled="true"
+                      >Resultados</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item disabled"
+                      href="#"
+                      aria-disabled="true"
+                      >Próxima carrera</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-people-fill me-1"></i>Equipos y Pilotos
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="equipos.html">Equipos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pilotos.html">Pilotos</a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Histórico</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="noticias.html">
+                  <i class="bi bi-newspaper me-1"></i>&nbsp;Noticias
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="tienda.html">
+                  <i class="bi bi-shop me-1"></i>&nbsp;Tienda
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <div class="input-group mb-2">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Buscar..."
+                  aria-label="Buscar"
+                  aria-describedby="button-search"
+                />
+                <button class="btn btn-danger" type="submit" id="button-search">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section para Tienda -->
+    <section class="hero hero-tienda text-center py-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold text-white mb-3">Tienda Oficial F1</h1>
+        <p class="lead text-white mb-4">
+          Merchandising exclusivo de tus equipos y pilotos favoritos
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#productos" class="btn btn-danger btn-lg">
+            <i class="bi bi-shop me-2"></i>Ver Productos
+          </a>
+          <a href="#filtros" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-funnel me-2"></i>Filtrar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tienda-section py-5" id="productos">
+      <div class="container">
+        <!-- Encabezado de sección con animación -->
+        <div class="text-center mb-5">
+          <span class="badge bg-danger px-3 py-2 mb-2">TIENDA OFICIAL</span>
+          <h2 class="section-title display-5 fw-bold mb-3">
+            Productos Destacados
+          </h2>
+          <p class="section-subtitle text-muted lead">
+            Descubre nuestra colección exclusiva de productos oficiales de F1
+          </p>
+        </div>
+
+        <!-- Filtros mejorados -->
+        <div
+          class="filtros-container bg-light rounded-4 shadow-sm p-4 mb-5"
+          id="filtros"
+        >
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="filtro-grupo">
+                <label
+                  for="equipo-filter"
+                  class="d-flex align-items-center mb-2"
+                >
+                  <span class="badge bg-danger rounded-circle p-2 me-2">
+                    <i class="bi bi-flag-fill"></i>
+                  </span>
+                  <span class="fw-semibold">Equipo</span>
+                </label>
+                <select
+                  name="equipo"
+                  id="equipo-filter"
+                  class="form-select border-0 shadow-sm"
+                >
+                  <option value="">Todos los Equipos</option>
+                  <option value="redbull">Red Bull Racing</option>
+                  <option value="ferrari">Ferrari</option>
+                  <option value="mercedes">Mercedes</option>
+                  <option value="mclaren">McLaren</option>
+                  <option value="astonmartin">Aston Martin</option>
+                  <option value="alpine">Alpine</option>
+                  <option value="williams">Williams</option>
+                  <option value="rb">RB</option>
+                  <option value="stake">Stake F1</option>
+                  <option value="haas">Haas F1</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="filtro-grupo">
+                <label
+                  for="categoria-filter"
+                  class="d-flex align-items-center mb-2"
+                >
+                  <span class="badge bg-danger rounded-circle p-2 me-2">
+                    <i class="bi bi-tags-fill"></i>
+                  </span>
+                  <span class="fw-semibold">Categoría</span>
+                </label>
+                <select
+                  name="categoria"
+                  id="categoria-filter"
+                  class="form-select border-0 shadow-sm"
+                >
+                  <option value="">Todas las Categorías</option>
+                  <option value="ropa">Ropa</option>
+                  <option value="gorras">Gorras</option>
+                  <option value="accesorios">Accesorios</option>
+                  <option value="modelos">Modelos a Escala</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="filtro-grupo">
+                <label
+                  for="precio-filter"
+                  class="d-flex align-items-center mb-2"
+                >
+                  <span class="badge bg-danger rounded-circle p-2 me-2">
+                    <i class="bi bi-cash"></i>
+                  </span>
+                  <span class="fw-semibold">Precio</span>
+                </label>
+                <select
+                  name="precio"
+                  id="precio-filter"
+                  class="form-select border-0 shadow-sm"
+                >
+                  <option value="">Cualquier Precio</option>
+                  <option value="0-50">$0 - $50</option>
+                  <option value="51-100">$51 - $100</option>
+                  <option value="101-200">$101 - $200</option>
+                  <option value="201+">$201+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-end">
+              <button
+                class="btn btn-danger w-100 d-flex align-items-center justify-content-center gap-2 py-3 rounded-3"
+              >
+                <i class="bi bi-search"></i>
+                <span class="fw-semibold">Aplicar Filtros</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grid de Productos con animación hover -->
+        <div class="productos-grid row g-4">
+          <!-- Red Bull Gorra -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/rb-gorra.jpg"
+                alt="Gorra Red Bull Racing"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/redbull-logo.png"
+                  alt="Logo Red Bull Racing"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-nuevo">Nuevo</span>
+                <span class="etiqueta-descuento">-15%</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Gorras</div>
+              <h3>Gorra Red Bull Racing 2024</h3>
+              <div class="producto-precios">
+                <span class="precio-original">$42.99</span>
+                <span class="precio-actual">$35.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <span class="rating-numero">(45)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ferrari Polo -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/ferrari-polo.jpg"
+                alt="Polo Ferrari"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/ferrari-logo.png"
+                  alt="Logo Ferrari"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-nuevo">Nuevo</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Ropa</div>
+              <h3>Polo Scuderia Ferrari 2024</h3>
+              <div class="producto-precios">
+                <span class="precio-actual">$89.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span class="rating-numero">(67)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mercedes Chaqueta -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/mercedes-chaqueta.jpg"
+                alt="Chaqueta Mercedes"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/mercedes-logo.png"
+                  alt="Logo Mercedes"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-nuevo">Nuevo</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Ropa</div>
+              <h3>Chaqueta Mercedes AMG F1 2024</h3>
+              <div class="producto-precios">
+                <span class="precio-actual">$159.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <span class="rating-numero">(38)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- McLaren Modelo -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/mclaren-modelo.jpg"
+                alt="Modelo McLaren"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/mclaren-logo.png"
+                  alt="Logo McLaren"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-descuento">-20%</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Modelos</div>
+              <h3>McLaren MCL38 Escala 1:18</h3>
+              <div class="producto-precios">
+                <span class="precio-original">$199.99</span>
+                <span class="precio-actual">$159.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <span class="rating-numero">(52)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aston Martin Mochila -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/astonmartin-mochila.jpg"
+                alt="Mochila Aston Martin"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/astonmartin-logo.png"
+                  alt="Logo Aston Martin"
+                />
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Accesorios</div>
+              <h3>Mochila Aston Martin F1</h3>
+              <div class="producto-precios">
+                <span class="precio-actual">$79.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <span class="rating-numero">(29)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alpine Sudadera -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/alpine-sudadera.jpg"
+                alt="Sudadera Alpine"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/alpine-logo.png"
+                  alt="Logo Alpine"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-nuevo">Nuevo</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Ropa</div>
+              <h3>Sudadera Alpine F1 Team 2024</h3>
+              <div class="producto-precios">
+                <span class="precio-actual">$99.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <span class="rating-numero">(41)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Williams Camiseta -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/williams-camiseta.jpg"
+                alt="Camiseta Williams"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/williams-logo.png"
+                  alt="Logo Williams"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-descuento">-25%</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Ropa</div>
+              <h3>Camiseta Williams Racing</h3>
+              <div class="producto-precios">
+                <span class="precio-original">$59.99</span>
+                <span class="precio-actual">$44.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <span class="rating-numero">(23)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- RB Gorra -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/rb-gorra-azul.jpg"
+                alt="Gorra RB F1"
+              />
+              <div class="producto-equipo">
+                <img src="../assets/images/logos/rb-logo.png" alt="Logo RB" />
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Gorras</div>
+              <h3>Gorra RB Formula One Team</h3>
+              <div class="producto-precios">
+                <span class="precio-actual">$34.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <span class="rating-numero">(19)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stake F1 Polo -->
+          <div class="producto-card">
+            <div class="producto-header">
+              <img
+                src="../assets/images/tienda/stake-polo.jpg"
+                alt="Polo Stake F1"
+              />
+              <div class="producto-equipo">
+                <img
+                  src="../assets/images/logos/stake-logo.png"
+                  alt="Logo Stake F1"
+                />
+              </div>
+              <div class="producto-etiquetas">
+                <span class="etiqueta-nuevo">Nuevo</span>
+              </div>
+            </div>
+            <div class="producto-content">
+              <div class="producto-categoria">Ropa</div>
+              <h3>Polo Stake F1 Team 2024</h3>
+              <div class="producto-precios">
+                <span class="precio-actual">$69.99</span>
+              </div>
+              <div class="producto-rating">
+                <div class="estrellas">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <span class="rating-numero">(27)</span>
+              </div>
+              <div class="producto-acciones">
+                <button class="btn-agregar">
+                  <i class="bi bi-cart-plus"></i> Agregar al Carrito
+                </button>
+                <button class="btn-favorito">
+                  <i class="bi bi-heart"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer mejorado con Bootstrap -->
+    <footer class="bg-dark text-light py-4 px-5">
+      <hr class="my-2 border-secondary" />
+      <!-- Fila principal -->
+      <div class="row g-4">
+        <!-- Columna de información principal -->
+        <div class="col-lg-4 col-md-6">
+          <div>
+            <img src="../assets/images/logo.png" class="logo" alt="F1 Logo" />
+            <h5 class="text-light">F1 Zone</h5>
+            <p class="text-secondary">
+              Tu portal definitivo de Fórmula 1. Noticias, resultados,
+              estadísticas y toda la información del mundo del automovilismo.
+            </p>
+          </div>
+          <div class="mb-4">
+            <h6 class="mb-3 text-light">Descarga nuestra App</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-apple me-2"></i>App Store
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-google-play me-2"></i>Play Store
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de enlaces rápidos -->
+        <div class="col-lg-2 col-md-6">
+          <h5 class="mb-3 text-light">Enlaces Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <a
+                href="../index.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="calendario.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Calendario
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="#"
+                class="text-secondary text-decoration-none hover-light disabled"
+                aria-disabled="true"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Resultados
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="pilotos.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Pilotos
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="equipos.html"
+                class="text-secondary text-decoration-none hover-light"
+              >
+                <i class="bi bi-chevron-right me-1"></i>Equipos
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de redes sociales -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Síguenos</h5>
+          <div class="d-flex gap-3 mb-4">
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-secondary fs-4 hover-light">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+          <h5 class="mb-3 text-light">Contacto</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2">
+              <i class="bi bi-geo-alt me-2"></i>Buenos Aires, Argentina
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i>info@f1zone.com
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i>+54 9 11 1234 5678
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna de newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="mb-3 text-light">Newsletter</h5>
+          <p class="text-secondary mb-4">
+            Suscríbete para recibir las últimas noticias y actualizaciones.
+          </p>
+          <form class="mb-4">
+            <div class="input-group mb-2">
+              <input
+                type="email"
+                class="form-control bg-dark text-light border-secondary"
+                placeholder="Tu email"
+                aria-label="Email"
+                aria-describedby="button-send-newsletter"
+              />
+              <button
+                class="btn btn-danger"
+                type="button"
+                id="button-send-newsletter"
+              >
+                <i class="bi bi-send-fill"></i>
+              </button>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="newsletterCheck"
+              />
+              <label
+                class="form-check-label text-secondary small"
+                for="newsletterCheck"
+              >
+                Acepto recibir comunicaciones comerciales
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-2 border-secondary" />
+
+      <!-- Fila de copyright -->
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <p class="text-secondary mb-0">
+            &copy; 2024 F1 Zone. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-secondary text-decoration-none me-3"
+            >Política de Privacidad</a
+          >
+          <a href="#" class="text-secondary text-decoration-none me-3"
+            >Términos de Uso</a
+          >
+          <a href="#" class="text-secondary text-decoration-none">Cookies</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

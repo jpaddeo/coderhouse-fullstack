@@ -1,0 +1,28 @@
+{
+  "name": "entrega3",
+  "version": "1.0.0",
+  "description": "Entrega 3 del curso Desarrollo Web",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "sass src/assets/styles.scss src/assets/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpaddeo/coderhouse-fullstack.git"
+  },
+  "keywords": [
+    "coderhouse",
+    "fullstack",
+    "development",
+    "web"
+  ],
+  "author": "Juan Pablo Addeo <jpaddeo>",
+  "bugs": {
+    "url": "https://github.com/jpaddeo/coderhouse-fullstack/issues"
+  },
+  "homepage": "https://github.com/jpaddeo/coderhouse-fullstack#readme",
+  "devDependencies": {
+    "sass": "^1.84.0"
+  }
+}
