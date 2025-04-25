@@ -15,7 +15,6 @@ class Producto {
     this.nombre = nombre;
     this.precio = precio;
     this.categoria = categoria;
-    this.fechaAgregado = new Date().toISOString();
   }
 }
 
@@ -35,69 +34,22 @@ class Carrito {
     this.guardarEnStorage();
     this.renderizarCarrito();
     this.actualizarContador();
-    
-    // Mostrar notificación de éxito
-    Swal.fire({
-      title: '¡Producto agregado!',
-      text: `${producto.nombre} ha sido agregado al carrito`,
-      icon: 'success',
-      timer: 2000,
-      showConfirmButton: false
-    });
   }
 
   // Eliminar producto
   eliminarProducto(id) {
-    Swal.fire({
-      title: '¿Estás seguro?',
-      text: "No podrás revertir esta acción",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Sí, eliminar',
-      cancelButtonText: 'Cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.productos = this.productos.filter((producto) => producto.id !== id);
-        this.guardarEnStorage();
-        this.renderizarCarrito();
-        this.actualizarContador();
-        
-        Swal.fire(
-          '¡Eliminado!',
-          'El producto ha sido eliminado del carrito',
-          'success'
-        );
-      }
-    });
+    this.productos = this.productos.filter((producto) => producto.id !== id);
+    this.guardarEnStorage();
+    this.renderizarCarrito();
+    this.actualizarContador();
   }
 
   // Vaciar carrito
   vaciarCarrito() {
-    Swal.fire({
-      title: '¿Estás seguro?',
-      text: "Se eliminarán todos los productos del carrito",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Sí, vaciar carrito',
-      cancelButtonText: 'Cancelar'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.productos = [];
-        this.guardarEnStorage();
-        this.renderizarCarrito();
-        this.actualizarContador();
-        
-        Swal.fire(
-          '¡Carrito vaciado!',
-          'Todos los productos han sido eliminados',
-          'success'
-        );
-      }
-    });
+    this.productos = [];
+    this.guardarEnStorage();
+    this.renderizarCarrito();
+    this.actualizarContador();
   }
 
   // Calcular total
@@ -135,26 +87,9 @@ class Carrito {
   renderizarCarrito() {
     const $listaCarrito = document.getElementById('cartList');
     const $totalElement = document.getElementById('totalAmount');
-    const $cartContent = document.querySelector('.cart-content');
 
     // Limpiar lista actual
     $listaCarrito.innerHTML = '';
-
-    // Remover botón de finalizar compra si existe
-    const $existingCheckoutButton = $cartContent.querySelector('.checkout-button');
-    if ($existingCheckoutButton) {
-      $existingCheckoutButton.remove();
-    }
-
-    if (this.productos.length === 0) {
-      $listaCarrito.innerHTML = `
-        <li class="cart-empty">
-          <span class="material-symbols-rounded">shopping_cart_off</span>
-          <p>Tu carrito está vacío</p>
-        </li>
-      `;
-      return;
-    }
 
     // Agrupar productos por categoría
     const productosAgrupados = this.agruparPorCategoria();
@@ -176,11 +111,9 @@ class Carrito {
             .map(
               (producto) => `
             <li class="cart-item">
-              <div class="cart-item-info">
-                <span class="cart-item-name">${producto.nombre}</span>
-                <span class="cart-item-price">$${producto.precio}</span>
-              </div>
-              <button class="btn-delete" onclick="carrito.eliminarProducto(${producto.id})" aria-label="Eliminar ${producto.nombre}">
+              <span>${producto.nombre}</span>
+              <span>$${producto.precio}</span>
+              <button class="btn-delete" onclick="carrito.eliminarProducto(${producto.id})">
                 <span class="material-symbols-rounded">delete</span>
               </button>
             </li>
@@ -194,18 +127,6 @@ class Carrito {
 
     // Actualizar total
     $totalElement.textContent = this.calcularTotal().toFixed(2);
-
-    // Agregar botón de finalizar compra si hay productos
-    const $checkoutButton = document.createElement('button');
-    $checkoutButton.className = 'btn btn-primary checkout-button';
-    $checkoutButton.innerHTML = `
-      <span class="material-symbols-rounded">shopping_cart_checkout</span>
-      Finalizar Compra
-    `;
-    $checkoutButton.addEventListener('click', () => {
-      window.location.href = 'checkout.html';
-    });
-    $cartContent.appendChild($checkoutButton);
   }
 }
 
@@ -253,43 +174,25 @@ document.addEventListener('DOMContentLoaded', () => {
   $productForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const $nombre = document.getElementById('productName').value.trim();
+    const $nombre = document.getElementById('productName').value;
     const $precio = parseFloat(document.getElementById('productPrice').value);
 
-    // Validación de campos
-    if (!$nombre || !$precio || !categoriaSeleccionada) {
-      Swal.fire({
-        title: 'Error',
-        text: 'Por favor, completa todos los campos y selecciona una categoría',
-        icon: 'error',
-        confirmButtonText: 'Entendido'
-      });
-      return;
+    if ($nombre && $precio && categoriaSeleccionada) {
+      const nuevoProducto = new Producto(
+        $nombre,
+        $precio,
+        categoriaSeleccionada
+      );
+      carrito.agregarProducto(nuevoProducto);
+      $productForm.reset();
+      // Limpiar la selección de categoría
+      document
+        .querySelectorAll('.category-card')
+        .forEach((card) => card.classList.remove('selected'));
+      categoriaSeleccionada = null;
+    } else if (!$nombre || !$precio || !categoriaSeleccionada) {
+      alert('Por favor, completa todos los campos y selecciona una categoría');
     }
-
-    // Validación de precio
-    if ($precio <= 0) {
-      Swal.fire({
-        title: 'Error',
-        text: 'El precio debe ser mayor a 0',
-        icon: 'error',
-        confirmButtonText: 'Entendido'
-      });
-      return;
-    }
-
-    const nuevoProducto = new Producto(
-      $nombre,
-      $precio,
-      categoriaSeleccionada
-    );
-    carrito.agregarProducto(nuevoProducto);
-    $productForm.reset();
-    // Limpiar la selección de categoría
-    document
-      .querySelectorAll('.category-card')
-      .forEach((card) => card.classList.remove('selected'));
-    categoriaSeleccionada = null;
   });
 
   // Manejar vaciado del carrito
