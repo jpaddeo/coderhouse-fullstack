@@ -135,9 +135,16 @@ class Carrito {
   renderizarCarrito() {
     const $listaCarrito = document.getElementById('cartList');
     const $totalElement = document.getElementById('totalAmount');
+    const $cartContent = document.querySelector('.cart-content');
 
     // Limpiar lista actual
     $listaCarrito.innerHTML = '';
+
+    // Remover botón de finalizar compra si existe
+    const $existingCheckoutButton = $cartContent.querySelector('.checkout-button');
+    if ($existingCheckoutButton) {
+      $existingCheckoutButton.remove();
+    }
 
     if (this.productos.length === 0) {
       $listaCarrito.innerHTML = `
@@ -187,6 +194,18 @@ class Carrito {
 
     // Actualizar total
     $totalElement.textContent = this.calcularTotal().toFixed(2);
+
+    // Agregar botón de finalizar compra si hay productos
+    const $checkoutButton = document.createElement('button');
+    $checkoutButton.className = 'btn btn-primary checkout-button';
+    $checkoutButton.innerHTML = `
+      <span class="material-symbols-rounded">shopping_cart_checkout</span>
+      Finalizar Compra
+    `;
+    $checkoutButton.addEventListener('click', () => {
+      window.location.href = 'checkout.html';
+    });
+    $cartContent.appendChild($checkoutButton);
   }
 }
 
