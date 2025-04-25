@@ -484,3 +484,121 @@ body {
 .category-items .cart-item:hover {
   background-color: #f8f9fa;
 }
+
+/* Mejoras de accesibilidad */
+.btn:focus,
+input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Estado vacío del carrito */
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--space) * 2);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.cart-empty .material-symbols-rounded {
+  font-size: 3rem;
+  margin-bottom: var(--space);
+}
+
+/* Mejoras en los items del carrito */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cart-item-name {
+  font-weight: 500;
+}
+
+.cart-item-price {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+/* Animaciones mejoradas */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cart-item {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Mejoras en el formulario */
+.input-group input:invalid {
+  border-color: #ef4444;
+}
+
+.input-group input:invalid:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Mejoras en los botones */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.btn:active::after {
+  width: 200%;
+  height: 200%;
+}
+
+/* Mejoras en la navegación */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
