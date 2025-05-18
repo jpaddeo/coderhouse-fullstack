@@ -4,10 +4,10 @@ export default function Logo() {
   return (
     <a
       href='/'
-      className='flex items-center justify-center gap-2 hover:scale-105 transition-all duration-100 ease-in-out'
+      className='flex items-center justify-center gap-2 hover:scale-105 transition-all duration-200 ease-in-out hover:text-blue-400'
     >
-      <BuildingStorefrontIcon className='w-6 h-6' />
-      <span>MiTienda</span>
+      <BuildingStorefrontIcon className='w-8 h-8' />
+      <span>CreaTuLanding+Addeo</span>
     </a>
   );
 }
