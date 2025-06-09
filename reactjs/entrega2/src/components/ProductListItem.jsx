@@ -19,7 +19,7 @@ export default function ProductListItem({ product }) {
         <div className='mb-4 flex items-center justify-end gap-4'></div>
 
         <Link
-          to={`productos/${product.id}`}
+          to={`/productos/${product.id}`}
           className='text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white'
         >
           {product.title}
@@ -35,14 +35,14 @@ export default function ProductListItem({ product }) {
           <div className='flex items-center justify-between gap-2 w-full border-t border-gray-400 pt-4 mt-2'>
             <button
               type='button'
-              className='rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white'
+              className='rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white cursor-not-allowed opacity-50'
             >
               <span className='sr-only'> Agregar a favoritos </span>
               <HeartIcon className='h-6 w-6' />
             </button>
             <button
               type='button'
-              className='inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4  focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4  focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 cursor-not-allowed opacity-50'
             >
               <ShoppingBagIcon className='mr-2 h-5 w-5' />
               <span className='sr-only'>Agregar al carrito</span>
