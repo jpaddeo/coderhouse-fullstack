@@ -1,6 +1,6 @@
 # CreaTuLanding + Addeo
 
-Entrega 1 del curso ReactJS de la Carrera de Desarrollador Web Fullstack de Coderhouse.
+Entrega 2 del curso ReactJS de la Carrera de Desarrollador Web Fullstack de Coderhouse.
 
 ## Ejecutar localmente
 
