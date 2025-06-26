@@ -2,7 +2,7 @@
 
 Detalles de configuración, instalación e implementación LOCAL del proyecto Entrega 1 del curso Programación Backend I: Desarrollo Avanzado de Backend correspondiente a la carrera de Desarrollo Web Fullstack de Coderhouse.
 
-[CONSIGNA](CONSIGNA.md)
+[CONSIGNA](consigna.md)
 
 ## Requisitos previos
 
