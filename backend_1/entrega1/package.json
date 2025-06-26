@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/server.js",
+    "dev": "nodemon --ignore data/ src/server.js",
+    "dev:experimental": "node --watch src/server.js",
     "start": "node src/server.js"
   },
   "keywords": [
@@ -21,5 +22,8 @@
   "packageManager": "pnpm@10.9.0",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
