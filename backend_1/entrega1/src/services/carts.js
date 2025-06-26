@@ -1,6 +1,9 @@
 import cartsRepository from '../repositories/carts.js';
 
 const cartsService = {
+  init: async () => {
+    await cartsRepository.init();
+  },
   add: async (product) => {
     return await cartsRepository.add(product);
   },

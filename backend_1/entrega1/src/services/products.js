@@ -1,6 +1,9 @@
 import productsRepository from '../repositories/products.js';
 
 const productsService = {
+  init: async () => {
+    await productsRepository.init();
+  },
   add: async (product) => {
     return await productsRepository.add(product);
   },
