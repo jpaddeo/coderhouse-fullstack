@@ -22,6 +22,12 @@ export default function ProductListItem({ product }) {
   }, [addItem, product]);
 
   const handleIncrementar = useCallback(() => {
+    if (itemQuantity(product) + 1 > product.stock) {
+      alert(
+        'No hay suficiente stock para aumentar la cantidad de este producto.'
+      );
+      return;
+    }
     increaseItem(product);
   }, [increaseItem, product]);
 
