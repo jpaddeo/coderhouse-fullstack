@@ -10,6 +10,7 @@ import {
   CategoriesPage,
   HomePage,
   ProductItemPage,
+  CartPage,
 } from '@/pages';
 
 createRoot(document.getElementById('root')).render(
@@ -20,6 +21,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/' element={<HomePage />} />
           <Route path='/categorias/:categoria?' element={<CategoriesPage />} />
           <Route path='/productos/:producto' element={<ProductItemPage />} />
+          <Route path='/cart' element={<CartPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Route>
       </Routes>

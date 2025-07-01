@@ -13,11 +13,6 @@ const MENU = [
     title: 'Categorías',
     href: '/categorias',
   },
-  {
-    title: 'Contacto',
-    href: 'javascript:void(0)',
-    coomingSoon: true,
-  },
 ];
 
 export default function Menu() {
@@ -27,18 +22,15 @@ export default function Menu() {
     setHideMenu(!hideMenu);
   };
   return (
-    <>
-      <div className='flex items-center lg:order-2'>
-        {/* <CartWidget /> */}
-        <button
-          type='button'
-          className='inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
-          onClick={handleMenuToggle}
-        >
-          <span className='sr-only'>Menu</span>
-          <Bars3Icon className='w-6 h-6' />
-        </button>
-      </div>
+    <div className='flex items-center justify-between lg:order-2 gap-2 flex-1'>
+      <button
+        type='button'
+        className='inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+        onClick={handleMenuToggle}
+      >
+        <span className='sr-only'>Menu</span>
+        <Bars3Icon className='w-6 h-6' />
+      </button>
       <div
         className={`justify-between items-center w-full lg:flex lg:w-auto lg:order-1 ${
           hideMenu ? 'hidden' : ''
@@ -50,6 +42,7 @@ export default function Menu() {
           ))}
         </ul>
       </div>
-    </>
+      <CartWidget />
+    </div>
   );
 }
