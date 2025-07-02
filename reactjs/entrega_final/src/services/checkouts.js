@@ -1,5 +1,5 @@
 import { db } from '@/data/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, getDoc } from 'firebase/firestore';
 import { productsService } from './product';
 
 export const checkoutsService = {
@@ -16,6 +16,20 @@ export const checkoutsService = {
     } catch (error) {
       console.error('Error checkouteando carrito:', error);
       throw new Error('Error checkouteando carrito');
+    }
+  },
+  get: async (id) => {
+    try {
+      const checkoutRef = doc(db, 'checkouts', id);
+      const checkoutDoc = await getDoc(checkoutRef);
+      if (checkoutDoc.exists()) {
+        return checkoutDoc.data();
+      } else {
+        throw new Error('Compra no encontrada');
+      }
+    } catch (error) {
+      console.error('Error obteniendo la compra:', error);
+      throw new Error('Error obteniendo la compra');
     }
   },
 };
