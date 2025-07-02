@@ -1,39 +1,36 @@
 import { useEffect, useState } from 'react';
-import { Navigate, useParams } from 'react-router';
-
-import { categories, products, MOCK_TIMEOUT_DELAY } from '@/data/mocks';
+import { useNavigate, useParams } from 'react-router';
 
 import CategoriesFilter from '@/components/partials/CategoriesFilter';
 import FilterOrder from '@/components/FilterOrder';
 import ProductListItem from '@/components/ProductListItem';
 import ProductListItemSkeleton from '@/components/partials/skeletons/ProductListItemSkeleton';
-
-const isValidCategory = (category) => {
-  return (
-    category && categories.some((cat) => cat.slug === category.toLowerCase())
-  );
-};
+import { categoriesService } from '../services/index';
 
 export default function CategoriesPage() {
   const { categoria } = useParams();
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
   const [sortOrder, setSortOrder] = useState('asc');
   const [showCategoriesFilter, setShowCategoriesFilter] = useState(true);
   const [categoryProducts, setCategoryProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => {
-      categoria && isValidCategory(categoria)
-        ? setCategoryProducts(
-            products.filter((product) => product.categories.includes(categoria))
-          )
-        : setCategoryProducts(products);
-      setLoading(false);
-    }, MOCK_TIMEOUT_DELAY);
-
-    return () => clearTimeout(timer);
-  }, [categoria]);
+    const fetchCategoryProducts = async (category) => {
+      try {
+        setLoading(true);
+        const fbCategoryProducts =
+          await categoriesService.getProductsByCategory(category);
+        setCategoryProducts(fbCategoryProducts);
+      } catch (error) {
+        console.error(error);
+        navigate('/404', { replace: true });
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchCategoryProducts(categoria);
+  }, [categoria, navigate]);
 
   const handleShowCategoriesFilter = () => {
     setShowCategoriesFilter(!showCategoriesFilter);
@@ -46,10 +43,6 @@ export default function CategoriesPage() {
     setCategoryProducts(sortedProducts);
     setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
   };
-
-  if (categoria && !isValidCategory(categoria)) {
-    return <Navigate to='/404' replace />;
-  }
 
   return (
     <div className='mx-auto max-w-screen-xl px-4 2xl:px-0'>

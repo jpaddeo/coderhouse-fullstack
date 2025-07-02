@@ -40,3 +40,15 @@ Se puede consultar desde el siguiente link [desarrollo_web/entrega3](desarrollo_
 ### Entrega Final
 
 Se puede consultar desde el siguiente link [desarrollo_web/entrega_final](desarrollo_web/entrega_final)
+
+## Ejecución local
+
+Para ejecutar localmente el proyecto se deberán ejecutar los siguientes comandos:
+
+```bash
+bun install && bun dev
+```
+
+### Llenado de BD
+
+Ingresar a la ruta `/seeder` y ejecutar el comando "Llenar BD".

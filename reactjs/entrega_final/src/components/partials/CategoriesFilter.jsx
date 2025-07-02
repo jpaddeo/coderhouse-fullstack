@@ -1,10 +1,32 @@
+import { useEffect, useState } from 'react';
+
 import { Link } from 'react-router';
 
 import { XCircleIcon } from '@heroicons/react/24/solid';
 
-import { categories } from '@/data/mocks';
+import { categoriesService } from '@//services/index';
 
 export default function CategoriesFilter({ categoria, popup = true }) {
+  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      try {
+        setLoading(true);
+        const fbCategories = await categoriesService.getAll();
+        setCategories(fbCategories);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchCategories();
+  }, []);
+
+  if (loading) return null;
+
   return (
     <div class='relative rounded-lg bg-white shadow dark:bg-gray-800 p-6'>
       {popup && (

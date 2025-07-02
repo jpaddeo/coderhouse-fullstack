@@ -1,5 +1,3 @@
-export const MOCK_TIMEOUT_DELAY = 500;
-
 const products = [
   {
     id: '1',

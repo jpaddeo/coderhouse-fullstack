@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-import { products as initialProducts, MOCK_TIMEOUT_DELAY } from '@/data/mocks';
-
 import ProductListItem from '@/components/ProductListItem';
 import CategoriesFilter from '@/components/partials/CategoriesFilter';
 import FilterOrder from '@/components/FilterOrder';
 import ProductListItemSkeleton from '@/components/partials/skeletons/ProductListItemSkeleton';
+
+import { productsService } from '@/services';
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);
@@ -14,13 +14,18 @@ export default function HomePage() {
   const [showCategoriesFilter, setShowCategoriesFilter] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => {
-      setProducts(initialProducts);
-      setLoading(false);
-    }, MOCK_TIMEOUT_DELAY);
-
-    return () => clearTimeout(timer);
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        const fbProducts = await productsService.getAll();
+        setProducts(fbProducts);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProducts();
   }, []);
 
   const handleSortClick = () => {

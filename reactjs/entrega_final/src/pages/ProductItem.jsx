@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { useParams, Navigate, Link } from 'react-router';
+import { useParams, useNavigate, Link } from 'react-router';
 import { HeartIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 
-import { products, MOCK_TIMEOUT_DELAY } from '@/data/mocks';
-
 import ProductItemSkeleton from '@/components/partials/skeletons/ProductItemSkeleton';
+import { productsService } from '@/services/index';
 
 export default function ProductItemPage() {
   const { producto } = useParams();
@@ -12,26 +11,26 @@ export default function ProductItemPage() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // simulo delay de un eventual fetch data
-    const timer = setTimeout(() => {
-      const foundProduct = products.find((p) => p.id === producto);
-      if (foundProduct) {
-        setProduct(foundProduct);
-        setSelectedImage(foundProduct.mainPhoto);
-      }
-      setLoading(false);
-    }, MOCK_TIMEOUT_DELAY);
+  const navigate = useNavigate();
 
-    return () => clearTimeout(timer);
-  }, [producto]);
+  useEffect(() => {
+    const fetchProduct = async (productoId) => {
+      try {
+        setLoading(true);
+        const fbProduct = await productsService.get(productoId);
+        setProduct(fbProduct);
+      } catch (error) {
+        console.error(error);
+        navigate.to('/404', { replace: true });
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProduct(producto);
+  }, [producto, navigate]);
 
   if (loading) {
     return <ProductItemSkeleton />;
-  }
-
-  if (!product) {
-    return <Navigate to='/404' replace />;
   }
 
   return (
