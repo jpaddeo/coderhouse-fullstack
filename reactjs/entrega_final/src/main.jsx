@@ -11,8 +11,9 @@ import {
   HomePage,
   ProductItemPage,
   CartPage,
+  CheckoutCheckPage,
+  SeederPage,
 } from '@/pages';
-import SeederPage from './pages/Seeder';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -24,6 +25,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/productos/:producto' element={<ProductItemPage />} />
           <Route path='/cart' element={<CartPage />} />
           <Route path='/seeder' element={<SeederPage />} />
+          <Route path='/checkout/:id' element={<CheckoutCheckPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Route>
       </Routes>
