@@ -1,9 +1,16 @@
 import { useCallback, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
+import toast from 'react-hot-toast';
+
+import {
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+} from '@heroicons/react/16/solid';
 
 import { validateCheckoutForm } from '@/utils/form';
 import { checkoutsService } from '@/services/checkouts';
 import { useCart } from '@/contexts/cart';
+import AlertMessage from '@/components/partials/AlertMessage';
 
 export default function CheckoutForm() {
   const [numeroTarjeta, setNumeroTarjeta] = useState('');
@@ -40,12 +47,26 @@ export default function CheckoutForm() {
     });
 
     if (!validationRes.isValid) {
-      alert(validationRes.message);
+      toast.custom((t) => (
+        <AlertMessage
+          id={t.id}
+          message={validationRes.message}
+          Icon={<ExclamationCircleIcon className='h-6 w-6 text-red-400' />}
+          visible={t.visible}
+        />
+      ));
       return;
     }
 
     if (totalItems === 0) {
-      alert('Tu carrito está vacío. Agrega productos antes de continuar.');
+      toast.custom((t) => (
+        <AlertMessage
+          id={t.id}
+          message='Tu carrito está vacío. Agrega productos antes de continuar.'
+          Icon={<ExclamationCircleIcon className='h-6 w-6 text-red-400' />}
+          visible={t.visible}
+        />
+      ));
       return;
     }
     setLoading(true);
@@ -69,14 +90,28 @@ export default function CheckoutForm() {
         totalItems,
         totalPrice,
       });
-      alert(`Su compra se realizó con éxito. ID de compra: ${checkoutId}`);
-      clearItems();
-      navigate('/', { replace: true });
+      toast.custom((t) => (
+        <AlertMessage
+          id={t.id}
+          message={`Su compra se realizó con éxito. ID de compra: ${checkoutId}`}
+          Icon={<CheckCircleIcon className='h-6 w-6 text-green-400' />}
+          visible={t.visible}
+          dismissCallback={() => {
+            clearItems();
+            navigate(`/checkout/${checkoutId}`, { replace: true });
+          }}
+        />
+      ));
     } catch (error) {
       console.error('Error al procesar el checkout:', error);
-      alert(
-        'Ocurrió un error al procesar tu compra. Por favor, intenta nuevamente más tarde.'
-      );
+      toast.custom((t) => (
+        <AlertMessage
+          id={t.id}
+          message='Ocurrió un error al procesar tu compra. Por favor, intenta nuevamente más tarde.'
+          Icon={<ExclamationCircleIcon className='h-6 w-6 text-red-400' />}
+          visible={t.visible}
+        />
+      ));
     } finally {
       setLoading(false);
     }
@@ -101,7 +136,7 @@ export default function CheckoutForm() {
       <div className='mb-6 grid grid-cols-2 gap-4'>
         <div className='col-span-2 sm:col-span-1'>
           <label
-            for='nombre'
+            htmlFor='nombre'
             className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
           >
             Nombre completo*
@@ -119,7 +154,7 @@ export default function CheckoutForm() {
 
         <div className='col-span-2 sm:col-span-1'>
           <label
-            for='numero-tarjeta'
+            htmlFor='numero-tarjeta'
             className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
           >
             Número de tarjeta*
@@ -137,7 +172,7 @@ export default function CheckoutForm() {
 
         <div>
           <label
-            for='expiracion'
+            htmlFor='expiracion'
             className='mb-2 block text-sm font-medium text-gray-900 dark:text-white'
           >
             Fecha expiración*
@@ -156,7 +191,7 @@ export default function CheckoutForm() {
         </div>
         <div>
           <label
-            for='cvc'
+            htmlFor='cvc'
             className='mb-2 flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white'
           >
             CVC*{' '}

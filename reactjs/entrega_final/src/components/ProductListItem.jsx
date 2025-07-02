@@ -72,7 +72,7 @@ export default function ProductListItem({ product }) {
               onClick={handleFavorito}
             >
               <span className='sr-only'> Agregar a favoritos </span>
-              <HeartIcon className='h-6 w-6 text-white' />
+              <HeartIcon className='h-6 w-6 text-gray-700 dark:text-white' />
             </button>
             {!isInCart(product) && (
               <button

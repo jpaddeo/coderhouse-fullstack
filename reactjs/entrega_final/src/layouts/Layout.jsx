@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router';
+import { Toaster } from 'react-hot-toast';
 
 import CartContextProvider from '@/contexts/cart';
 
@@ -10,6 +11,7 @@ export default function Layout() {
     <CartContextProvider>
       <Header />
       <main className='min-h-screen flex flex-col items-center justify-start gap-12'>
+        <Toaster position='top-center' reverseOrder={false} />
         <section className='bg-gray-50 py-8 antialiased dark:bg-gray-900 md:py-12 w-full h-full min-h-screen'>
           <div className='mx-auto max-w-screen-xl px-4 2xl:px-0'>
             <FeatureContextProvider>

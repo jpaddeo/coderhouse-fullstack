@@ -122,7 +122,7 @@ export default function ProductItemPage() {
               disabled
             >
               <span className='sr-only'>Agregar a favoritos</span>
-              <HeartIcon className='h-6 w-6' />
+              <HeartIcon className='h-6 w-6 text-gray-700 dark:text-white' />
             </button>
 
             <button

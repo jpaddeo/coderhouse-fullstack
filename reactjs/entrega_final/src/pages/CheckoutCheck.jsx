@@ -22,37 +22,19 @@ export default function CheckoutCheckPage() {
 
   return (
     <div className='max-w-2xl mx-auto p-6'>
-      <h1 className='text-2xl font-bold mb-4'>Order Summary</h1>
-      <div className='bg-white shadow-md rounded-lg p-6'>
-        <h2 className='text-xl font-semibold mb-4'>Checkout Details</h2>
+      <h1 className='text-center text-2xl font-bold text-gray-900 dark:text-white mb-4'>
+        Resumen de Compra
+      </h1>
+      <div className='flex flex-col p-8 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-white'>
         <p className='mb-2'>
-          <strong>Compra ID #:</strong> {id}
+          <strong className='text-lg font-semibold mt-6 mb-2'>Compra ID #:</strong> {id}
         </p>
-        <p className='mb-2'>
-          <strong>Total de Productos:</strong> ${checkout.totalProducts}
-        </p>
-        <p className='mb-2'>
-          <strong>Total de Items:</strong> ${checkout.totalItems}
-        </p>
-        <p className='mb-2'>
-          <strong>Total:</strong> ${checkout.totalPrice.toFixed(2)}
-        </p>
-        <h3 className='text-lg font-semibold mt-6 mb-2'>Productos</h3>
-        <ul className='list-disc pl-5'>
-          {checkout.products.map((product) => (
-            <li key={product.id} className='mb-2'>
-              <span className='font-medium'>{product.title}</span> - $
-              {product.price.toFixed(2)} x {product.quantity}
-            </li>
-          ))}
-        </ul>
-        <h3 className='text-lg font-semibold mt-6 mb-2'>Detalles</h3>
+        <h3 className='text-lg font-semibold mt-6 mb-2'>Cliente</h3>
         <p className='mb-2'>
           <strong>Nombre:</strong> {checkout.client.nombre}
         </p>
-        <h3 className='text-lg font-semibold mt-6 mb-2'>Detalle del Pago</h3>
         <p className='mb-2'>
-          <strong>Método: Tarjeta de Crédito</strong>
+          <strong>Método:</strong> Tarjeta de Crédito
         </p>
         <p className='mb-2'>
           <strong>Número de tarjeta:</strong> **** **** ****{' '}
@@ -60,6 +42,24 @@ export default function CheckoutCheckPage() {
         </p>
         <p className='mb-2'>
           <strong>Fecha Expiración:</strong> {checkout.client.expiracion}
+        </p>
+        <h3 className='text-lg font-semibold mt-6 mb-2'>Productos</h3>
+        <ul className='list-disc pl-5 mb-2'>
+          {checkout.products.map((product) => (
+            <li key={product.id} className='mb-2'>
+              <span className='font-medium'>{product.title}</span> - $
+              {product.price.toFixed(2)} x {product.quantity}
+            </li>
+          ))}
+        </ul>
+        <p className='mb-2'>
+          <strong>Total de Productos:</strong> {checkout.totalProducts}
+        </p>
+        <p className='mb-2'>
+          <strong>Total de Items:</strong> {checkout.totalItems}
+        </p>
+        <p className='mb-2'>
+          <strong>Total:</strong> ${checkout.totalPrice.toFixed(2)}
         </p>
       </div>
     </div>
