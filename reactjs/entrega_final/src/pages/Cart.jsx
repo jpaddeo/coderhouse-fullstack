@@ -9,6 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import { useCart } from '@/contexts/cart';
+import CheckoutForm from '@/components/CheckoutForm';
 
 const EmptyCart = () => {
   return (
@@ -89,8 +90,7 @@ export default function CartPage() {
       </h1>
 
       <div className='flex flex-col md:flex-row gap-6'>
-        {/* Cart Items */}
-        <div className='w-full md:w-2/3'>
+        <div className='w-full md:w-1/2'>
           <div className='bg-white dark:bg-gray-800 rounded-lg shadow'>
             <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
               {items.map((item) => (
@@ -118,13 +118,25 @@ export default function CartPage() {
                         {item.description}
                       </p>
 
-                      <div className='mt-2 flex items-end justify-between'>
-                        <p className='text-lg font-medium text-gray-900 dark:text-white'>
-                          {item.price.toLocaleString('es-AR', {
-                            style: 'currency',
-                            currency: 'ARS',
-                          })}
-                        </p>
+                      <div className='mt-2 flex items-end flex-col sm:flex-row justify-between'>
+                        <div className='flex flex-col items-start'>
+                          <p className='text-lg font-medium text-gray-900 dark:text-white'>
+                            {item.price.toLocaleString('es-AR', {
+                              style: 'currency',
+                              currency: 'ARS',
+                            })}
+                          </p>
+                          <p className='mt-2 text-sm text-right text-gray-700 dark:text-gray-300'>
+                            Subtotal:{' '}
+                            {(item.price * item.quantity).toLocaleString(
+                              'es-AR',
+                              {
+                                style: 'currency',
+                                currency: 'ARS',
+                              }
+                            )}
+                          </p>
+                        </div>
 
                         <div className='flex items-center gap-4'>
                           <div className='flex items-center border border-gray-300 rounded-lg'>
@@ -153,14 +165,6 @@ export default function CartPage() {
                           </button>
                         </div>
                       </div>
-
-                      <p className='mt-2 text-sm text-right text-gray-700 dark:text-gray-300'>
-                        Subtotal:{' '}
-                        {(item.price * item.quantity).toLocaleString('es-AR', {
-                          style: 'currency',
-                          currency: 'ARS',
-                        })}
-                      </p>
                     </div>
                   </div>
                 </li>
@@ -176,10 +180,8 @@ export default function CartPage() {
             </div>
           </div>
         </div>
-
-        {/* Order Summary */}
-        <div className='w-full md:w-1/3'>
-          <div className='bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-20'>
+        <div className='w-full md:w-1/2'>
+          <div className='bg-white dark:bg-gray-800 rounded-lg shadow p-6'>
             <h2 className='text-lg font-medium text-gray-900 dark:text-white mb-4'>
               Resumen del pedido
             </h2>
@@ -214,21 +216,8 @@ export default function CartPage() {
                 </div>
               </div>
             </dl>
-            <div className='mt-6'>
-              <button
-                type='button'
-                className='w-full flex justify-center items-center rounded-lg bg-blue-700 px-5 py-3 text-base font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-              >
-                Finalizar compra
-              </button>
-              <Link
-                to='/'
-                className='mt-3 w-full flex justify-center items-center rounded-lg border border-gray-300 bg-white px-5 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-800'
-              >
-                Seguir comprando
-              </Link>
-            </div>
           </div>
+          <CheckoutForm />
         </div>
       </div>
     </div>
