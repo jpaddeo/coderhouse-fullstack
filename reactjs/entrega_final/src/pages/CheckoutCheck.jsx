@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 
 export default function CheckoutCheckPage() {
   const { id } = useParams();
@@ -62,6 +62,12 @@ export default function CheckoutCheckPage() {
           <strong>Total:</strong> ${checkout.totalPrice.toFixed(2)}
         </p>
       </div>
+      <Link
+        to='/'
+        className='mt-3 w-full flex justify-center items-center  px-5 py-3 text-base font-medium text-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:text-white dark:focus:ring-blue-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg'
+      >
+        Volver
+      </Link>      
     </div>
   );
 }

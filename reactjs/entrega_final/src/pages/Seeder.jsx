@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 import { CircleStackIcon } from '@heroicons/react/24/outline';
 
@@ -44,6 +44,12 @@ export default function SeederPage() {
         >
           {loading ? 'Llenando la bd...' : 'Llenar BD'}
         </button>
+        <Link
+          to='/'
+          className='mt-3 w-full flex justify-center items-center  px-5 py-3 text-base font-medium text-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:text-white dark:focus:ring-blue-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg'
+        >
+          Seguir comprando
+        </Link>
       </div>
     </div>
   );
