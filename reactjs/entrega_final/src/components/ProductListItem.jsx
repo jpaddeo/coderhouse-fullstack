@@ -1,11 +1,20 @@
 import { useCallback } from 'react';
 import { Link } from 'react-router';
 
-import { HeartIcon, MinusIcon, PlusIcon } from '@heroicons/react/24/outline';
-import { ShoppingBagIcon } from '@heroicons/react/24/outline';
+import toast from 'react-hot-toast';
+
+import {
+  ArchiveBoxXMarkIcon,
+  HeartIcon,
+  MinusIcon,
+  PlusIcon,
+  ShoppingBagIcon,
+} from '@heroicons/react/24/outline';
 
 import { useCart } from '@/contexts/cart';
 import { useFeature } from '@/contexts/feature';
+
+import AlertMessage from '@/components/partials/AlertMessage';
 
 export default function ProductListItem({ product }) {
   const { addItem, isInCart, increaseItem, decreaseItem, itemQuantity } =
@@ -23,13 +32,18 @@ export default function ProductListItem({ product }) {
 
   const handleIncrementar = useCallback(() => {
     if (itemQuantity(product) + 1 > product.stock) {
-      alert(
-        'No hay suficiente stock para aumentar la cantidad de este producto.'
-      );
+      toast.custom((t) => (
+        <AlertMessage
+          id={t.id}
+          message='No hay suficiente stock para aumentar la cantidad de este producto.'
+          Icon={<ArchiveBoxXMarkIcon className='h-6 w-6 text-yellow-400' />}
+          visible={t.visible}
+        />
+      ));
       return;
     }
     increaseItem(product);
-  }, [increaseItem, product]);
+  }, [increaseItem, product, itemQuantity]);
 
   const handleDecrementar = useCallback(() => {
     decreaseItem(product);

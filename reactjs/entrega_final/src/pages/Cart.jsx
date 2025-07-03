@@ -1,15 +1,20 @@
 import { useCallback } from 'react';
 import { Link } from 'react-router';
+
+import toast from 'react-hot-toast';
+
 import {
   PlusIcon,
   MinusIcon,
   TrashIcon,
   ShoppingCartIcon,
   ArrowLeftIcon,
+  ArchiveBoxXMarkIcon,
 } from '@heroicons/react/24/outline';
 
 import { useCart } from '@/contexts/cart';
 import CheckoutForm from '@/components/CheckoutForm';
+import AlertMessage from '@/components/partials/AlertMessage';
 
 const EmptyCart = () => {
   return (
@@ -50,9 +55,14 @@ export default function CartPage() {
   const handleIncrementar = useCallback(
     (product) => {
       if (itemQuantity(product) + 1 > product.stock) {
-        alert(
-          'No hay suficiente stock para aumentar la cantidad de este producto.'
-        );
+        toast.custom((t) => (
+          <AlertMessage
+            id={t.id}
+            message='No hay suficiente stock para aumentar la cantidad de este producto.'
+            Icon={<ArchiveBoxXMarkIcon className='h-6 w-6 text-yellow-400' />}
+            visible={t.visible}
+          />
+        ));
         return;
       }
       increaseItem(product);
