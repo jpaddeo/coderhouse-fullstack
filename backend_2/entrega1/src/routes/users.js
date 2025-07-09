@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import UserManager from '../dao/managers/product.js';
+import UserManager from '../dao/managers/user.js';
 import { authenticateJWT, requireAdmin } from '../middlewares/auth.js';
 
 const router = Router();

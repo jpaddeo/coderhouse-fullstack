@@ -1,3 +1,8 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+console.log(process.env.MONGODB_URI);
+
 import express from 'express';
 import mongoose from 'mongoose';
 
@@ -18,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 
 mongoose
-  .connect('mongodb://localhost:27017/coderhouse', {})
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/mydb', {})
   .then(() => console.log('Conectado a MongoDB'))
   .catch((error) => console.error('Error conectando a MongoDB:', error));
 
